@@ -5,10 +5,10 @@ import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col font-sans mx-auto   pt-14 ">
+    <div className="flex min-h-screen flex-col font-sans mx-auto pt-6 md:pt-14">
       <Header />
       <svg
-        className="fixed bottom-0 right-0 h-62.5 w-56.5 -z-10"
+        className="fixed bottom-0 right-0 h-40 w-36 md:h-62.5 md:w-56.5 -z-10"
         xmlns="http://www.w3.org/2000/svg"
         width="290"
         height="350"
@@ -22,7 +22,7 @@ export default function Home() {
       </svg>
 
       <svg
-        className="fixed top-0 left-0 h-175 w-250 -z-10"
+        className="fixed top-0 left-0 h-80 w-100 md:h-175 md:w-250 -z-10"
         xmlns="http://www.w3.org/2000/svg"
         width="1209"
         height="926"
@@ -36,7 +36,7 @@ export default function Home() {
       </svg>
 
       <svg
-        className="fixed top-0 right-0 h-60 w-88 -z-10"
+        className="fixed top-0 right-0 h-32 w-44 md:h-60 md:w-88 -z-10"
         xmlns="http://www.w3.org/2000/svg"
         width="453"
         height="338"
@@ -49,11 +49,11 @@ export default function Home() {
           d="M1192.21 -258.888V-258.89C1192.21 -422.346 1059.7 -554.855 896.242 -554.855H295.962C132.507 -554.855 0 -422.346 0 -258.89V-258.888C0 70.3321 266.885 337.215 596.104 337.215C925.324 337.215 1192.21 70.3321 1192.21 -258.888ZM70.885 -38.9249C71.073 -38.8669 71.219 -38.7589 71.41 -38.7039C71.321 -38.4509 71.351 -38.2439 71.267 -37.9929C70.935 -38.1959 70.489 -38.4659 70.489 -38.4659C70.489 -38.4659 70.767 -38.7869 70.885 -38.9249Z"
         />
       </svg>
-      <main className=" w-full  flex-1 pt-4 flex justify-center ">
-        <div className="flex gap-8 max-w-[75rem]  justify-end w-full">
+      <main className="w-full flex-1 pt-4 flex justify-center px-4 md:px-0">
+        <div className="flex flex-col-reverse md:flex-row gap-6 md:gap-8 max-w-[75rem] justify-end w-full">
           <div
             dir="rtl"
-            className="flex-1 inline justify-center items-center flex-col max-w-150 text-right"
+            className="flex-1 inline justify-center items-center flex-col max-w-full md:max-w-150 text-center md:text-right"
           >
             <h1 className="text-2xl font-bold text-[#7fa687] pb-4">
               הורים במשפחה בשינוי
@@ -118,7 +118,7 @@ export default function Home() {
           <ClippedImage
             src="/page-4/dad.png"
             alt="Boy"
-            className="w-160 h-fit"
+            className="w-full max-w-72 md:max-w-none md:w-160 h-fit mx-auto md:mx-0"
           />
         </div>
       </main>

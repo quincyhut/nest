@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col font-sans mx-auto   pt-14 ">
+    <div className="flex min-h-screen flex-col font-sans mx-auto pt-6 md:pt-14">
       <Header />
       {/* <svg
         className="fixed bottom-0 right-0 h-62.5 w-56.5 -z-10"
@@ -23,7 +23,7 @@ export default function Home() {
       </svg> */}
 
       <svg
-        className="fixed top-0 left-0 h-168 w-235 -z-10"
+        className="fixed top-0 left-0 h-80 w-100 md:h-168 md:w-235 -z-10"
         xmlns="http://www.w3.org/2000/svg"
         width="1209"
         height="926"
@@ -49,13 +49,13 @@ export default function Home() {
           fill="#EDF2EC"
         />
       </svg> */}
-      <main className=" w-full  flex-1 pt-4 flex justify-center ">
-        <div className="flex gap-8 max-w-[75rem]  justify-end w-full">
+      <main className="w-full flex-1 pt-4 flex justify-center px-4 md:px-0">
+        <div className="flex flex-col-reverse md:flex-row gap-6 md:gap-8 max-w-[75rem] justify-end w-full">
           <div
             dir="rtl"
-            className="flex-1 inline justify-center items-center flex-col pt-15 max-w-85 "
+            className="flex-1 inline justify-center items-center flex-col pt-6 md:pt-15 max-w-full md:max-w-85 text-center md:text-right"
           >
-            <h1 className="text-2xl font-bold text-[#508b58]">אודות</h1>
+            <h1 className="text-xl md:text-2xl font-bold text-[#508b58]">אודות</h1>
             <p className="mt-4 text-sm text-black ">
               NEST הוקמה מתוך הבנה שהשינוי המשפחתי אינו אמור לפגוע בילדים.
               בישראל מתרחשים מדי שנה אלפי מקרים שבהם הורה אינו מסוגל להמשיך לשלם
@@ -71,8 +71,8 @@ export default function Home() {
           </div>
           <ClippedImage
             src="/page-1/family.png"
-            alt="Boy"
-            className="w-160 h-fit"
+            alt="Family"
+            className="w-full max-w-72 md:max-w-none md:w-160 h-fit mx-auto md:mx-0"
           />
         </div>
       </main>

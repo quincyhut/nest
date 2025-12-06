@@ -5,11 +5,11 @@ import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col font-sans mx-auto   pt-14 ">
+    <div className="flex min-h-screen flex-col font-sans mx-auto pt-6 md:pt-14">
       <Header />
 
       <svg
-        className="fixed top-0 left-0 h-175 w-250 -z-10"
+        className="fixed top-0 left-0 h-80 w-100 md:h-175 md:w-250 -z-10"
         xmlns="http://www.w3.org/2000/svg"
         width="1209"
         height="926"
@@ -22,11 +22,11 @@ export default function Home() {
         />
       </svg>
 
-      <main className=" w-full  flex-1 pt-4 flex justify-center ">
-        <div className="flex gap-8 max-w-[60rem]  justify-end w-full">
+      <main className="w-full flex-1 pt-4 flex justify-center px-4 md:px-0">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-8 max-w-[60rem] justify-end w-full">
           <div
             dir="rtl"
-            className="flex-1 flex flex-col items-center justify-center text-right py-2 px-6"
+            className="flex-1 flex flex-col items-center justify-center text-center md:text-right py-2 px-4 md:px-6"
           >
             <div className="grid md:grid-cols-2 gap-24 max-w-6xl w-full">
               {/* Right column */}
@@ -135,7 +135,7 @@ export default function Home() {
             clipType="circle"
             src="/page-7/kid.png"
             alt="Boy"
-            className="w-140 h-fit fixed top- right-0 translate-x-[55%]"
+            className="hidden md:block w-140 h-fit fixed top- right-0 translate-x-[55%]"
           />
         </div>
       </main>
