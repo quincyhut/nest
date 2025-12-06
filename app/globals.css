@@ -1,26 +1,72 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Colors */
+  --color-primary: #508B58;
+  --color-primary-light: #EDF2EC;
+  --color-primary-transparent: rgba(80, 139, 88, 0.33);
+  --color-text: #000000;
+  --color-text-secondary: #4D4D4F;
+  --color-background: #ffffff;
+
+  /* Typography */
+  --font-sans: "Inter", "Arimo", sans-serif;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-background: var(--color-background);
+  --color-foreground: var(--color-text);
+  --color-primary: var(--color-primary);
+  --color-primary-light: var(--color-primary-light);
+  --color-primary-transparent: var(--color-primary-transparent);
+  --color-text-secondary: var(--color-text-secondary);
+  --font-sans: var(--font-sans);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  direction: rtl;
+}
+
+/* Typography utilities */
+.text-primary {
+  color: var(--color-primary);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-primary-light {
+  background-color: var(--color-primary-light);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+/* Headings - Inter Light */
+h1, h2, h3 {
+  font-weight: 300;
+  letter-spacing: -0.03em;
+}
+
+h1 {
+  font-size: 31.3px;
+  line-height: 35px;
+}
+
+/* Body text - Inter Regular */
+p, a, span {
+  font-weight: 400;
+  font-size: 14.1px;
+  line-height: 22px;
+}
+
+/* Small text */
+.text-sm {
+  font-size: 10.5px;
+  line-height: 16px;
 }

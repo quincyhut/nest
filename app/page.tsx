@@ -1,65 +1,76 @@
 import Image from "next/image";
+import Header from "./components/Header";
+import ClippedImage from "./components/ClippedImage";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <div className="flex min-h-screen flex-col font-sans mx-auto   pt-14 ">
+      <Header />
+      <svg
+        className="fixed bottom-0 right-0 h-62.5 w-56.5 -z-10"
+        xmlns="http://www.w3.org/2000/svg"
+        width="290"
+        height="350"
+        viewBox="0 0 290 350"
+        fill="none"
+      >
+        <path
+          opacity="0.330002"
+          d="M1192.21 295.967V295.965C1192.21 132.508 1059.7 0 896.242 0H295.962C132.507 0 0 132.508 0 295.965V295.967C0 625.187 266.885 892.07 596.104 892.07C925.324 892.07 1192.21 625.187 1192.21 295.967ZM70.885 515.93C71.073 515.988 71.219 516.096 71.41 516.151C71.321 516.404 71.351 516.611 71.267 516.862C70.935 516.659 70.489 516.389 70.489 516.389C70.489 516.389 70.767 516.068 70.885 515.93Z"
+          fill="#508B58"
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      </svg>
+
+      <svg
+        className="fixed top-0 left-0 h-168 w-235 -z-10"
+        xmlns="http://www.w3.org/2000/svg"
+        width="1209"
+        height="926"
+        viewBox="0 0 1209 926"
+        fill="none"
+      >
+        <path
+          d="M1208.79 206.815V206.812C1208.79 9.84705 1049.12 -149.825 852.148 -149.825H128.81C-68.152 -149.825 -227.825 9.84705 -227.825 206.812V206.815C-227.825 603.525 93.772 925.12 490.481 925.12C887.191 925.12 1208.79 603.525 1208.79 206.815ZM-142.408 471.871C-142.18 471.94 -142.005 472.071 -141.775 472.136C-141.882 472.442 -141.846 472.691 -141.947 472.993C-142.348 472.748 -142.884 472.423 -142.884 472.423C-142.884 472.423 -142.55 472.037 -142.408 471.871Z"
+          fill="#EDF2EC"
+        />
+      </svg>
+
+      <svg
+        className="fixed top-0 right-0 h-60 w-88 -z-10"
+        xmlns="http://www.w3.org/2000/svg"
+        width="453"
+        height="338"
+        viewBox="0 0 453 338"
+        fill="none"
+      >
+        <path
+          d="M1192.21 -258.888V-258.89C1192.21 -422.346 1059.7 -554.855 896.242 -554.855H295.962C132.507 -554.855 0 -422.346 0 -258.89V-258.888C0 70.3321 266.885 337.215 596.104 337.215C925.324 337.215 1192.21 70.3321 1192.21 -258.888ZM70.885 -38.9249C71.073 -38.8669 71.219 -38.7589 71.41 -38.7039C71.321 -38.4509 71.351 -38.2439 71.267 -37.9929C70.935 -38.1959 70.489 -38.4659 70.489 -38.4659C70.489 -38.4659 70.767 -38.7869 70.885 -38.9249Z"
+          fill="#EDF2EC"
+        />
+      </svg>
+      <main className=" w-full  flex-1 pt-4 flex justify-center ">
+        <div className="flex gap-8 max-w-[75rem]  justify-end w-full">
+          <div
+            dir="rtl"
+            className="flex-1 inline justify-center items-center flex-col pt-30 max-w-85 "
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <h1 className="text-2xl font-bold text-[#508b58]">
+              ביטוח מזונות.NEST הורות ממשיכה גם אחרי פרידה.
+            </h1>
+            <p className="mt-4 text-sm text-black ">
+              מבטיחה רצף תשלומי מזונות לילדיםNEST גם כאשר מתרחש אירוע בלתי צפוי
+              אצל אחד ההורים. הפתרון הוגן, אחראי, יציב ומגן על המשפחה.
+            </p>
+          </div>
+          <ClippedImage
+            src="/page-0/boy.png"
+            alt="Boy"
+            className="w-160 h-fit"
+          />
         </div>
       </main>
+      <Footer />
     </div>
   );
 }
