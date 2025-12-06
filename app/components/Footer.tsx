@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="w-full ">
@@ -12,15 +14,15 @@ export default function Footer() {
           />
         </div>
         <div className="flex items-center">
-          <button className="bg-[#508B58]/40 whitespace-nowrap text-black px-6 py-3 text-xs">
+          <Link href="/parents" className="bg-[#508B58]/40 whitespace-nowrap text-black px-6 py-3 text-xs">
             מידע והצטרפות להורים
-          </button>
+          </Link>
         </div>
         <div className="flex items-center">
-          <button className="bg-[#508B58]/40 text-xs whitespace-nowrap flex flex-col text-black px-6 py-1 ">
+          <Link href="/partners" className="bg-[#508B58]/40 text-xs whitespace-nowrap flex flex-col text-black px-6 py-1 ">
             <span> מסלול שותפים מקצועי</span>
             <span>משרדי עורכי דין ומגשרים </span>
-          </button>
+          </Link>
         </div>
       </div>
     </footer>

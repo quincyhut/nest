@@ -20,7 +20,12 @@ export default function RootLayout({
 }>) {
   return (
     <html>
-      <body className={`${inter.variable} antialiased`}>{children}</body>
+      <body
+        className={`${inter.variable} antialiased [direction:ltr]`}
+        dir="rtl"
+      >
+        {children}
+      </body>
     </html>
   );
 }

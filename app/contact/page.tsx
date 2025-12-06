@@ -53,20 +53,66 @@ export default function Home() {
         <div className="flex gap-8 max-w-[75rem]  justify-end w-full">
           <div
             dir="rtl"
-            className="flex-1 inline justify-center items-center flex-col max-w-150 text-right  p-6 rounded-md"
+            className="flex-1 flex flex-col max-w-150 text-right p-6"
           >
             <h1 className="text-2xl font-bold text-[#7fa687] mb-2">צור קשר</h1>
 
-            <p className="text-sm text-black mb-4">
+            <p className="text-sm text-black mb-6">
               צוות <span className="font-bold text-[#508b58]">NEST</span> זמין
               לשאלות, לייעוץ ולהצטרפות.
             </p>
 
-            <div className="flex flex-row-reverse  justify-end gap-3 text-sm text-black font-medium">
-              <span>+972-55-0000000</span>
-              <span className="text-gray-400">|</span>
-              <span className="text-gray-800">info@nestinsure.co.il</span>
-            </div>
+            <form className="flex flex-col gap-4">
+              <div className="flex flex-col gap-1">
+                <label htmlFor="name" className="text-sm text-black">שם מלא</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  className="border border-gray-300 px-4 py-2 text-sm focus:outline-none focus:border-[#508B58]"
+                />
+              </div>
+
+              <div className="flex flex-col gap-1">
+                <label htmlFor="email" className="text-sm text-black">אימייל</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  className="border border-gray-300 px-4 py-2 text-sm focus:outline-none focus:border-[#508B58]"
+                />
+              </div>
+
+              <div className="flex flex-col gap-1">
+                <label htmlFor="phone" className="text-sm text-black">טלפון</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  className="border border-gray-300 px-4 py-2 text-sm focus:outline-none focus:border-[#508B58]"
+                />
+              </div>
+
+              <div className="flex flex-col gap-1">
+                <label htmlFor="message" className="text-sm text-black">הודעה</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={4}
+                  className="border border-gray-300 px-4 py-2 text-sm focus:outline-none focus:border-[#508B58] resize-none"
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="bg-[#508B58] text-white px-6 py-3 text-sm mt-2 hover:bg-[#3d6b43] transition-colors"
+              >
+                שלח
+              </button>
+            </form>
           </div>
 
           <ClippedImage

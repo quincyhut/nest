@@ -27,7 +27,7 @@ body {
   background: var(--color-background);
   color: var(--color-text);
   font-family: var(--font-sans);
-  direction: rtl;
+  
 }
 
 /* Typography utilities */
