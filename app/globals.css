@@ -65,8 +65,14 @@ p, a, span {
   line-height: 22px;
 }
 
-/* Small text */
+/* Small text - minimum 12px */
 .text-sm {
-  font-size: 10.5px;
-  line-height: 16px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+/* Extra small text - set to minimum 12px */
+.text-xs {
+  font-size: 12px;
+  line-height: 18px;
 }

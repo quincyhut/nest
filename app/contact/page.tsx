@@ -1,11 +1,90 @@
-import Image from "next/image";
+"use client";
+
+import { useState } from "react";
 import Header from "../components/Header";
 import ClippedImage from "../components/ClippedImage";
 import Footer from "../components/Footer";
 
-export default function Home() {
+export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    phone: "",
+    userType: "",
+    message: "",
+    officeName: "",
+    mainField: "",
+    mainArea: "",
+    consent: false,
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+
+  const showProfessionalFields = formData.userType === "lawyer" || formData.userType === "mediator";
+
+  const isFormValid =
+    formData.fullName.trim() !== "" &&
+    formData.email.trim() !== "" &&
+    formData.phone.trim() !== "" &&
+    formData.userType !== "" &&
+    formData.consent;
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    const { name, value, type } = e.target;
+    const checked = (e.target as HTMLInputElement).checked;
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === "checkbox" ? checked : value,
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!isFormValid) return;
+
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+
+    try {
+      // Send email to info@nestinsure.co.il
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitStatus("success");
+        setFormData({
+          fullName: "",
+          email: "",
+          phone: "",
+          userType: "",
+          message: "",
+          officeName: "",
+          mainField: "",
+          mainArea: "",
+          consent: false,
+        });
+      } else {
+        setSubmitStatus("error");
+      }
+    } catch {
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
-    <div className="flex min-h-screen flex-col font-sans mx-auto pt-6 md:pt-14">
+    <div className="fixed inset-0 overflow-y-auto">
+      <div className="flex min-h-full flex-col font-sans mx-auto pt-3 md:pt-7">
       <Header />
       <svg
         className="fixed bottom-0 right-0 h-40 w-36 md:h-62.5 md:w-56.5 -z-10"
@@ -49,80 +128,222 @@ export default function Home() {
           fill="#EDF2EC"
         />
       </svg>
+
       <main className="w-full flex-1 pt-4 flex justify-center px-4 md:px-0">
         <div className="flex flex-col-reverse md:flex-row gap-6 md:gap-8 max-w-[75rem] justify-end w-full">
           <div
             dir="rtl"
             className="flex-1 flex flex-col max-w-full md:max-w-150 text-center md:text-right p-4 md:p-6"
           >
-            <h1 className="text-2xl font-bold text-[#7fa687] mb-2">צור קשר</h1>
+            <h1 className="text-2xl font-bold text-[#508b58] mb-2">צרו קשר</h1>
 
             <p className="text-sm text-black mb-6">
               צוות <span className="font-bold text-[#508b58]">NEST</span> זמין
-              לשאלות, לייעוץ ולהצטרפות.
+              לשאלות, לייעוץ ולהצטרפות. מלאו פרטים ונשוב אליכם או צרו קשר ב:{" "}
+              <a href="mailto:info@nestinsure.co.il" className="text-[#508b58] underline">
+                info@nestinsure.co.il
+              </a>
             </p>
 
-            <form className="flex flex-col gap-4">
+            {submitStatus === "success" && (
+              <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 mb-4 text-sm">
+                הודעתך נשלחה בהצלחה! ניצור איתך קשר בהקדם.
+              </div>
+            )}
+
+            {submitStatus === "error" && (
+              <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 mb-4 text-sm">
+                אירעה שגיאה בשליחת ההודעה. אנא נסו שוב או צרו קשר ישירות במייל.
+              </div>
+            )}
+
+            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+              {/* Full Name */}
               <div className="flex flex-col gap-1">
-                <label htmlFor="name" className="text-sm text-black">שם מלא</label>
+                <label htmlFor="fullName" className="text-sm text-black">
+                  שם מלא <span className="text-red-500">*</span>
+                </label>
                 <input
                   type="text"
-                  id="name"
-                  name="name"
+                  id="fullName"
+                  name="fullName"
+                  value={formData.fullName}
+                  onChange={handleInputChange}
                   required
                   className="border border-gray-300 px-4 py-2 text-sm focus:outline-none focus:border-[#508B58]"
                 />
               </div>
 
+              {/* Email */}
               <div className="flex flex-col gap-1">
-                <label htmlFor="email" className="text-sm text-black">אימייל</label>
+                <label htmlFor="email" className="text-sm text-black">
+                  דוא&quot;ל <span className="text-red-500">*</span>
+                </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
                   required
                   className="border border-gray-300 px-4 py-2 text-sm focus:outline-none focus:border-[#508B58]"
                 />
               </div>
 
+              {/* Phone */}
               <div className="flex flex-col gap-1">
-                <label htmlFor="phone" className="text-sm text-black">טלפון</label>
+                <label htmlFor="phone" className="text-sm text-black">
+                  טלפון <span className="text-red-500">*</span>
+                </label>
                 <input
                   type="tel"
                   id="phone"
                   name="phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
                   required
                   className="border border-gray-300 px-4 py-2 text-sm focus:outline-none focus:border-[#508B58]"
                 />
               </div>
 
+              {/* User Type */}
               <div className="flex flex-col gap-1">
-                <label htmlFor="message" className="text-sm text-black">הודעה</label>
+                <label htmlFor="userType" className="text-sm text-black">
+                  בחרו <span className="text-red-500">*</span>
+                </label>
+                <select
+                  id="userType"
+                  name="userType"
+                  value={formData.userType}
+                  onChange={handleInputChange}
+                  required
+                  className="border border-gray-300 px-4 py-2 text-sm focus:outline-none focus:border-[#508B58] bg-white"
+                >
+                  <option value="">בחרו...</option>
+                  <option value="lawyer">עו&quot;ד</option>
+                  <option value="mediator">מגשרים</option>
+                  <option value="parent">הורים</option>
+                  <option value="other">אחר</option>
+                </select>
+              </div>
+
+              {/* Professional Fields - shown only for lawyers/mediators */}
+              {showProfessionalFields && (
+                <div className="flex flex-col gap-4 border-r-2 border-[#508B58] pr-4 mr-2">
+                  {/* Office Name */}
+                  <div className="flex flex-col gap-1">
+                    <label htmlFor="officeName" className="text-sm text-black">
+                      שם המשרד
+                    </label>
+                    <input
+                      type="text"
+                      id="officeName"
+                      name="officeName"
+                      value={formData.officeName}
+                      onChange={handleInputChange}
+                      className="border border-gray-300 px-4 py-2 text-sm focus:outline-none focus:border-[#508B58]"
+                    />
+                  </div>
+
+                  {/* Main Field */}
+                  <div className="flex flex-col gap-1">
+                    <label htmlFor="mainField" className="text-sm text-black">
+                      תחום עיסוק עיקרי
+                    </label>
+                    <select
+                      id="mainField"
+                      name="mainField"
+                      value={formData.mainField}
+                      onChange={handleInputChange}
+                      className="border border-gray-300 px-4 py-2 text-sm focus:outline-none focus:border-[#508B58] bg-white"
+                    >
+                      <option value="">בחרו...</option>
+                      <option value="family-law">דיני משפחה וגירושין</option>
+                      <option value="family-mediation">גישור משפחתי</option>
+                      <option value="other">אחר</option>
+                    </select>
+                  </div>
+
+                  {/* Main Area */}
+                  <div className="flex flex-col gap-1">
+                    <label htmlFor="mainArea" className="text-sm text-black">
+                      אזור פעילות עיקרי
+                    </label>
+                    <select
+                      id="mainArea"
+                      name="mainArea"
+                      value={formData.mainArea}
+                      onChange={handleInputChange}
+                      className="border border-gray-300 px-4 py-2 text-sm focus:outline-none focus:border-[#508B58] bg-white"
+                    >
+                      <option value="">בחרו...</option>
+                      <option value="tel-aviv">תל אביב והמרכז</option>
+                      <option value="sharon">השרון</option>
+                      <option value="jerusalem">ירושלים</option>
+                      <option value="haifa">חיפה והצפון</option>
+                      <option value="south">דרום</option>
+                      <option value="nationwide">כלל־ארצי</option>
+                    </select>
+                  </div>
+                </div>
+              )}
+
+              {/* Message */}
+              <div className="flex flex-col gap-1">
+                <label htmlFor="message" className="text-sm text-black">
+                  הודעה
+                </label>
                 <textarea
                   id="message"
                   name="message"
-                  rows={4}
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  rows={3}
                   className="border border-gray-300 px-4 py-2 text-sm focus:outline-none focus:border-[#508B58] resize-none"
                 />
               </div>
 
-              <button
-                type="submit"
-                className="bg-[#508B58] text-white px-6 py-3 text-sm mt-2 hover:bg-[#3d6b43] transition-colors"
-              >
-                שלח
-              </button>
+              {/* Consent and Submit */}
+              <div className="flex flex-col gap-3 mt-2">
+                <div className="flex items-start gap-2">
+                  <input
+                    type="checkbox"
+                    id="consent"
+                    name="consent"
+                    checked={formData.consent}
+                    onChange={handleInputChange}
+                    className="mt-1 accent-[#508B58]"
+                  />
+                  <label htmlFor="consent" className="text-xs text-black leading-tight">
+                    אני מאשר/ת ל-NEST ליצור איתי קשר ולשלוח אליי מידע מקצועי ועדכונים
+                    לגבי שיתוף פעולה. <span className="text-red-500">*</span>
+                  </label>
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={!isFormValid || isSubmitting}
+                  className={`px-6 py-3 text-sm mt-2 transition-colors ${
+                    isFormValid && !isSubmitting
+                      ? "bg-[#508B58] text-white hover:bg-[#3d6b43] cursor-pointer"
+                      : "bg-gray-300 text-gray-500 cursor-not-allowed"
+                  }`}
+                >
+                  {isSubmitting ? "שולח..." : "אישור ושליחה"}
+                </button>
+              </div>
             </form>
           </div>
 
           <ClippedImage
             src="/page-5/mother.png"
-            alt="Boy"
+            alt="Mother"
             className="w-full max-w-72 md:max-w-none md:w-160 h-fit mx-auto md:mx-0 hidden md:block"
           />
         </div>
       </main>
       <Footer />
+      </div>
     </div>
   );
 }

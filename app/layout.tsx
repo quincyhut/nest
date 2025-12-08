@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html>
       <body
-        className={`${inter.variable} antialiased [direction:ltr]`}
+        className={`${inter.variable} antialiased [direction:ltr] md:overflow-hidden md:h-screen`}
         dir="rtl"
       >
         {children}

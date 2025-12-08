@@ -1,11 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 import Header from "../components/Header";
 import ClippedImage from "../components/ClippedImage";
 import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col font-sans mx-auto pt-6 md:pt-14">
+    <div className="flex min-h-screen md:h-screen md:overflow-hidden flex-col font-sans mx-auto pt-3 md:pt-7">
       <Header />
       <svg
         className="fixed bottom-0 right-0 h-40 w-36 md:h-62.5 md:w-56.5 -z-10"
@@ -53,7 +54,7 @@ export default function Home() {
         <div className="flex flex-col-reverse md:flex-row gap-6 md:gap-8 max-w-[75rem] justify-end w-full">
           <div
             dir="rtl"
-            className="flex-1 inline justify-center items-center flex-col max-w-full md:max-w-150 text-center md:text-right"
+            className="flex-1 inline justify-center items-center flex-col max-w-full md:max-w-150 text-center md:text-right md:max-h-[calc(100vh-8rem)] md:overflow-y-auto"
           >
             <h1 className="text-2xl font-bold text-[#7fa687] pb-4">
               הורים במשפחה בשינוי
@@ -113,6 +114,12 @@ export default function Home() {
                 בהירות ושקט, ומשאירה את טובת הילדים במרכז.
               </p>
             </div>
+            <Link
+              href="/contact"
+              className="mt-6 inline-block bg-[#508B58] text-white px-6 py-3 text-sm hover:bg-[#3d6b43] transition-colors"
+            >
+              צרו קשר
+            </Link>
           </div>
 
           <ClippedImage

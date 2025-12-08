@@ -1,15 +1,16 @@
 import Image from "next/image";
+import Link from "next/link";
 import Header from "../components/Header";
 import ClippedImage from "../components/ClippedImage";
 import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col font-sans mx-auto pt-6 md:pt-14">
+    <div className="flex min-h-screen md:h-screen md:overflow-hidden flex-col font-sans mx-auto pt-3 md:pt-7">
       <Header />
 
       <svg
-        className="fixed top-0 left-0 h-80 w-100 md:h-175 md:w-250 -z-10"
+        className="fixed top-0 left-0 h-80 w-100 md:h-175 md:w-250 2xl:h-140 2xl:w-200 -z-10"
         xmlns="http://www.w3.org/2000/svg"
         width="1209"
         height="926"
@@ -23,16 +24,19 @@ export default function Home() {
       </svg>
 
       <main className="w-full flex-1 pt-4 flex justify-center px-4 md:px-0">
-        <div className="flex flex-col md:flex-row gap-6 md:gap-8 max-w-[60rem] justify-end w-full">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-8 max-w-[60rem] justify-end w-full md:mr-8 lg:mr-16">
           <div
             dir="rtl"
-            className="flex-1 flex flex-col items-center justify-center text-center md:text-right py-2 px-4 md:px-6"
+            className="flex-1 flex flex-col items-center justify-center text-center md:text-right py-2 px-4 md:px-6 md:max-h-[calc(100vh-8rem)] md:overflow-y-auto"
           >
+            <h1 className="text-2xl font-bold text-[#508b58] mb-6 w-full max-w-6xl">
+              מסלול שותפים מקצועי
+            </h1>
             <div className="grid md:grid-cols-2 gap-24 max-w-6xl w-full">
               {/* Right column */}
-              <div className="space-y-2">
+              <div className="space-y-4">
                 <div>
-                  <h2 className="text-sm font-bold text-[#508b58]">
+                  <h2 className="text-sm font-bold text-[#508b58] mb-1">
                     NEST ביטוח מזונות
                   </h2>
                   <p className="text-sm text-black leading-tight">
@@ -50,7 +54,7 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <h2 className="text-sm font-bold text-[#508b58]">
+                  <h2 className="text-sm font-bold text-[#508b58] mb-1">
                     מהו ביטוח המזונות של NEST?
                   </h2>
                   <p className="text-sm text-black leading-tight">
@@ -62,7 +66,7 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <h2 className="text-sm font-bold text-[#508b58]">
+                  <h2 className="text-sm font-bold text-[#508b58] mb-1">
                     חדשות בדיני משפחה:
                   </h2>
                   <ul className="list-disc list-inside text-sm text-black leading-tight space-y-0.5">
@@ -80,9 +84,9 @@ export default function Home() {
               </div>
 
               {/* Left column */}
-              <div className="space-y-2">
+              <div className="space-y-4">
                 <div>
-                  <h2 className="text-sm font-bold text-[#508b58]">
+                  <h2 className="text-sm font-bold text-[#508b58] mb-1">
                     הערך ללקוחות:
                   </h2>
                   <p className="text-sm text-black leading-tight">
@@ -102,7 +106,7 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <h2 className="text-sm font-bold text-[#508b58]">
+                  <h2 className="text-sm font-bold text-[#508b58] mb-1">
                     הערך לעורכי דין ומגשרים:
                   </h2>
                   <ul className="list-disc list-inside text-sm text-black leading-tight space-y-0.5">
@@ -114,7 +118,7 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <h2 className="text-sm font-bold text-[#508b58]">
+                  <h2 className="text-sm font-bold text-[#508b58] mb-1">
                     הזמנה להצטרפות כשותפים מומחים:
                   </h2>
                   <p className="text-sm text-black leading-tight">
@@ -126,6 +130,12 @@ export default function Home() {
                     אלו שמובילים את התחום.
                   </p>
                 </div>
+                <Link
+                  href="/contact"
+                  className="mt-4 inline-block bg-[#508B58] text-white px-6 py-3 text-sm hover:bg-[#3d6b43] transition-colors"
+                >
+                  צרו קשר
+                </Link>
               </div>
             </div>
           </div>
@@ -135,7 +145,7 @@ export default function Home() {
             clipType="circle"
             src="/page-7/kid.png"
             alt="Boy"
-            className="hidden md:block w-140 h-fit fixed top- right-0 translate-x-[55%]"
+            className="hidden md:block w-140 h-fit fixed top-1/2 right-0 -translate-y-1/2 translate-x-[55%] 2xl:translate-x-[65%]"
           />
         </div>
       </main>
