@@ -1,5 +1,46 @@
 @import "tailwindcss";
 
+/* Font Face Declarations */
+@font-face {
+  font-family: 'FbKolya';
+  src: url('/font/FbKolya-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FbKolya';
+  src: url('/font/FbKolya-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FbKolya';
+  src: url('/font/FbKolya-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aeroport';
+  src: url('/font/Aeroport-bold-trial.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aeroport';
+  src: url('/font/Aeroport-light-trial.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* Colors */
   --color-primary: #508B58;
@@ -10,7 +51,8 @@
   --color-background: #ffffff;
 
   /* Typography */
-  --font-sans: "Inter", "Arimo", sans-serif;
+  --font-sans: 'FbKolya', sans-serif;
+  --font-brand: 'Aeroport', sans-serif;
 }
 
 @theme inline {
@@ -21,6 +63,12 @@
   --color-primary-transparent: var(--color-primary-transparent);
   --color-text-secondary: var(--color-text-secondary);
   --font-sans: var(--font-sans);
+  --font-brand: var(--font-brand);
+}
+
+/* Brand font for NEST */
+.font-brand {
+  font-family: var(--font-brand);
 }
 
 body {

@@ -1,0 +1,208 @@
+%!Adobe-FontList 1.25
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Abel-Regular
+FamilyName:Abel
+StyleName:Regular
+MenuName:Abel
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Abel Regular
+WritingScript:Roman
+OutlineFileName:/Users/quincyhutchison/Downloads/מיני סייט Folder/Document fonts/Abel-Regular.ttf
+DataFormat:sfntData
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:33184
+FileModTime:334011600
+NameArray:0,Win,1,Abel
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:/Users/quincyhutchison/Downloads/מיני סייט Folder/Document fonts/AdobeFnt25.lst
+FileLength:4414
+FileModTime:786532755
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:AdobeHebrew-Regular
+FamilyName:Adobe Hebrew
+StyleName:Regular
+MenuName:Adobe Hebrew
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Adobe Hebrew Regular
+FamilyNameNative:
+StyleNameNative:Regular
+FullNameNative:
+WritingScript:Hebrew
+OutlineFileName:/Users/quincyhutchison/Downloads/מיני סייט Folder/Document fonts/AdobeHebrew-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:73492
+FileModTime:584268273
+NameArray:0,Mac,18,Adobe Hebrew
+NameArray:0,Mac,4,Adobe Hebrew Regular
+NameArray:0,Win,1,Adobe Hebrew
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Aeroport-Bold
+FamilyName:Aeroport
+StyleName:Bold
+MenuName:Aeroport
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Aeroport Bold
+WritingScript:Roman
+OutlineFileName:/Users/quincyhutchison/Downloads/מיני סייט Folder/Document fonts/Aeroport-bold-trial.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:54260
+FileModTime:514882749
+NameArray:0,Mac,4,Aeroport Bold
+NameArray:0,Win,1,Aeroport
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Aeroport-Light
+FamilyName:Aeroport
+StyleName:Light
+MenuName:Aeroport Light
+StyleBits:0
+WeightClass:300
+WidthClass:5
+AngleClass:0
+FullName:Aeroport Light
+WritingScript:Roman
+OutlineFileName:/Users/quincyhutchison/Downloads/מיני סייט Folder/Document fonts/Aeroport-light-trial.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:64220
+FileModTime:514882732
+NameArray:0,Mac,4,Aeroport Light
+NameArray:0,Win,1,Aeroport Light
+NameArray:0,Win,16,Aeroport
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:FbKolya-Bold
+FamilyName:FbKolya
+StyleName:Bold
+MenuName:FbKolya Bold
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:FbKolya-Bold
+FamilyNameNative:
+StyleNameNative:Bold
+FullNameNative:
+WritingScript:Hebrew
+OutlineFileName:/Users/quincyhutchison/Downloads/מיני סייט Folder/Document fonts/FbKolya-Bold.otf
+DataFormat:sfntData
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:62656
+FileModTime:254162760
+NameArray:0,Mac,4,FbKolya Bold
+NameArray:0,Win,1,FbKolya Bold
+NameArray:0,Win,16,FbKolya
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:FbKolya-Light
+FamilyName:FbKolya
+StyleName:Light
+MenuName:FbKolya Light
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:FbKolya-Light
+FamilyNameNative:
+StyleNameNative:Light
+FullNameNative:
+WritingScript:Hebrew
+OutlineFileName:/Users/quincyhutchison/Downloads/מיני סייט Folder/Document fonts/FbKolya-Light.otf
+DataFormat:sfntData
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:62112
+FileModTime:254162794
+NameArray:0,Mac,4,FbKolya Light
+NameArray:0,Win,1,FbKolya Light
+NameArray:0,Win,16,FbKolya
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:FbKolya-Regular
+FamilyName:FbKolya
+StyleName:Regular
+MenuName:FbKolya Regular
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:FbKolya-Regular
+FamilyNameNative:
+StyleNameNative:Regular
+FullNameNative:
+WritingScript:Hebrew
+OutlineFileName:/Users/quincyhutchison/Downloads/מיני סייט Folder/Document fonts/FbKolya-Regular.otf
+DataFormat:sfntData
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:62124
+FileModTime:254162816
+NameArray:0,Mac,4,FbKolya Regular
+NameArray:0,Win,1,FbKolya Regular
+NameArray:0,Win,16,FbKolya
+%EndFont
+

@@ -57,12 +57,12 @@ export default function Home() {
             className="flex-1 inline justify-center items-center flex-col pt-6 md:pt-30 max-w-full md:max-w-85 text-center pb-6"
           >
             <h1 className="text-2xl font-bold text-[#508b58]">
-              NEST ביטוח מזונות.
+              <span className="font-brand">NEST</span> ביטוח מזונות.
               <br />
               הורות ממשיכה גם אחרי פרידה.
             </h1>
             <p className="mt-4 text-sm text-black">
-              NEST מבטיחה רצף תשלומי מזונות לילדים
+              <span className="font-brand">NEST</span> מבטיחה רצף תשלומי מזונות לילדים
               <br />
               גם כאשר מתרחש אירוע בלתי צפוי אצל אחד ההורים.
               <br />

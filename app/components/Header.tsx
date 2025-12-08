@@ -40,13 +40,13 @@ export default function Header() {
   return (
     <>
       <header
-        className={`w-full ml-0 md:ml-36 border-b-[0.2px] border-[#b1b1b1] max-w-none md:max-w-272 px-4 md:px-0 sticky top-0 z-50 md:static md:z-auto transition-colors ${isScrolled ? "bg-white" : "bg-transparent"} md:bg-transparent`}
+        className={`w-full mx-auto border-b-[0.2px] border-[#b1b1b1] max-w-5xl px-4 md:px-6 sticky top-0 z-50 md:static md:z-auto transition-colors ${isScrolled ? "bg-white" : "bg-transparent"} md:bg-transparent`}
       >
-        <nav className="flex justify-between pt-1 md:pt-6 gap-4 md:gap-16 pb-1 md:pb-2 items-center md:items-end">
+        <nav className="flex justify-between pt-1 md:pt-6 gap-4 md:gap-10 pb-1 md:pb-2 items-center md:items-end">
           <Link
             href="/"
             prefetch={true}
-            className="text-lg font-semibold text-zinc-900 dark:text-zinc-100 -my-2"
+            className="text-lg font-semibold text-zinc-900 dark:text-zinc-100 mb-1 md:mb-2"
           >
             <Image src="/logo.svg" alt="Logo" width={130} height={40} className="w-[90px] md:w-[130px]" />
           </Link>
@@ -67,14 +67,14 @@ export default function Header() {
             <Link
               href="/contact"
               prefetch={true}
-              className="text-sm text-black hover:text-zinc-900 whitespace-nowrap"
+              className="text-black hover:text-zinc-900 whitespace-nowrap"
             >
               צרו קשר
             </Link>
             <Link
               href="/parents"
               prefetch={true}
-              className="text-sm text-black hover:text-zinc-900 whitespace-nowrap"
+              className="text-black hover:text-zinc-900 whitespace-nowrap"
             >
               מידע והצטרפות להורים
             </Link>
@@ -83,11 +83,11 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 prefetch={true}
-                className={
+                className={`whitespace-nowrap ${
                   pathname === item.href
                     ? "text-[#508b58]"
                     : "text-black hover:text-zinc-900"
-                }
+                }`}
               >
                 {item.label}
               </Link>
@@ -95,7 +95,7 @@ export default function Header() {
             <Link
               href="/partners"
               prefetch={true}
-              className="bg-[#508B58]/40 px-4 py-2 text-xs text-center leading-tight whitespace-nowrap text-black"
+              className="bg-[#508B58]/40 px-4 py-2 text-center leading-tight whitespace-nowrap text-black"
             >
               <span className="block">מסלול שותפים מקצועי</span>
               <span className="block">משרדי עורכי דין ומגשרים</span>

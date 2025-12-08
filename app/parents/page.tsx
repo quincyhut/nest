@@ -65,7 +65,7 @@ export default function Home() {
             </h2>
 
             <p className="text-xs text-black leading-relaxed ">
-              <span className="font-bold text-[#508b58]">NEST</span> מבטחת
+              <span className="font-brand font-bold text-[#508b58]">NEST</span> מבטחת
               מזונות.
             </p>
 
@@ -80,20 +80,20 @@ export default function Home() {
               גם כאשר מגיעים להסכם מאוזן, שינוי נסיבות בלתי צפוי עלול לערער
               אותו.
               <br />
-              <span className="font-bold text-[#508b58]">NEST</span> מעניקה לכם
+              <span className="font-brand font-bold text-[#508b58]">NEST</span> מעניקה לכם
               רשת ביטחון כלכלית שמבטיחה את המשך תשלומי המזונות במקרה שבו ההורה
               המשלם אינו מסוגל לעמוד בהתחייבותו.
             </p>
 
             <p className="text-xs text-black leading-relaxed pb-2">
-              <span className="font-bold text-[#508b58]">NEST</span> מבטיחה
+              <span className="font-brand font-bold text-[#508b58]">NEST</span> מבטיחה
               שתשלומי המזונות ימשיכו להגיע
               <br />
               גם אם אחד ההורים אינו מסוגל לשלם בשל מחלה קשה, נכות מתאונה ופטירה.
             </p>
 
             <h2 className="text-base font-bold text-[#508b58] ">
-              למה הורים בוחרים NEST?
+              למה הורים בוחרים <span className="font-brand">NEST</span>?
             </h2>
 
             <ul className="list-disc list-inside text-xs text-black space-y-1 mb-12">
@@ -110,7 +110,7 @@ export default function Home() {
               <p className="text-xs text-gray-700 leading-relaxed ">
                 לא עוד חשש שיעערער את ההסכם ואת הביטחון הכלכלי.
                 <br />
-                <span className="font-bold text-[#508b58]">NEST</span> מעניקה
+                <span className="font-brand font-bold text-[#508b58]">NEST</span> מעניקה
                 בהירות ושקט, ומשאירה את טובת הילדים במרכז.
               </p>
             </div>
