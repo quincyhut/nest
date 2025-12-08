@@ -116,7 +116,7 @@ export default function Home() {
             </div>
             <Link
               href="/contact"
-              className="mt-6 inline-block bg-[#508B58] text-white px-6 py-3 text-sm hover:bg-[#3d6b43] transition-colors"
+              className="mt-6 inline-block bg-[#508B58] text-white px-6 py-3 text-base hover:bg-[#3d6b43] transition-colors"
             >
               צרו קשר
             </Link>

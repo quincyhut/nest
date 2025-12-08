@@ -36,10 +36,10 @@ export default function Home() {
               {/* Right column */}
               <div className="space-y-4">
                 <div>
-                  <h2 className="text-sm font-bold text-[#508b58] mb-1">
+                  <h2 className="text-base font-bold text-[#508b58] mb-1">
                     <span className="font-brand">NEST</span> ביטוח מזונות
                   </h2>
-                  <p className="text-sm text-black leading-tight">
+                  <p className="text-base text-black leading-tight">
                     ההורות ממשיכה גם אחרי הפרידה.
                     ההסכם צריך לייצר ודאות, יציבות, ומנגנוני אכיפה ברורים לאורך זמן.
                     חלוקת הוצאות גידול הילדים היא אחד המרכיבים המרכזיים למחלוקות בין הורים נפרדים.
@@ -50,10 +50,10 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <h2 className="text-sm font-bold text-[#508b58] mb-1">
+                  <h2 className="text-base font-bold text-[#508b58] mb-1">
                     מהו ביטוח המזונות של <span className="font-brand">NEST</span>?
                   </h2>
-                  <p className="text-sm text-black leading-tight">
+                  <p className="text-base text-black leading-tight">
                     <span className="font-brand">NEST</span> היא פוליסת ביטוח פיננסית חדשנית.
                     היא מבטיחה את מימוש התחייבות המזונות גם במצב של מחלה קשה, נכות מתאונה ופטירה.
                     הילדים הם המוטבים.
@@ -63,10 +63,10 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <h2 className="text-sm font-bold text-[#508b58] mb-1">
+                  <h2 className="text-base font-bold text-[#508b58] mb-1">
                     חדשנות בדיני משפחה:
                   </h2>
-                  <ul className="list-disc list-inside text-sm text-black leading-tight space-y-0.5">
+                  <ul className="list-disc list-inside text-base text-black leading-tight space-y-0.5">
                     <li>בישראל בין 15,000-18,000 זוגות מתגרשים מדי שנה.</li>
                     <li>סוגיית המזונות וההוצאות היא מוקד חיכוך חוזר ונשנה.</li>
                     <li>שינוי נסיבות של אחד ההורים הוא אחת הסיבות הנפוצות לפתיחה מחודשת של הסכמים.</li>
@@ -81,10 +81,10 @@ export default function Home() {
               {/* Left column */}
               <div className="space-y-4">
                 <div>
-                  <h2 className="text-sm font-bold text-[#508b58] mb-1">
+                  <h2 className="text-base font-bold text-[#508b58] mb-1">
                     הערך ללקוחות:
                   </h2>
-                  <p className="text-sm text-black leading-tight">
+                  <p className="text-base text-black leading-tight">
                     NEST מעניקה לשני ההורים את מה שחשוב באמת לילדים: יציבות, ודאות ושקט נפשי.
                     הפוליסה מבטיחה שהמזונות ימשיכו להיות משולמים גם כשהחיים משתנים לפתע, ומונעת
                     מתחים, חששות ועומס מיותר.
@@ -97,10 +97,10 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <h2 className="text-sm font-bold text-[#508b58] mb-1">
+                  <h2 className="text-base font-bold text-[#508b58] mb-1">
                     הערך לעורכי דין ומגשרים:
                   </h2>
-                  <ul className="list-disc list-inside text-sm text-black leading-tight space-y-0.5">
+                  <ul className="list-disc list-inside text-base text-black leading-tight space-y-0.5">
                     <li>כלי אסטרטגי למו״מ המפחית את עוצמת הקונפליקט.</li>
                     <li>חיזוק משפטי של ההסכם באמצעות מנגנון חיצוני יציב.</li>
                     <li>יתרון תדמיתי כמי שמובילים חשיבה חדשנית בתחום.</li>
@@ -109,10 +109,10 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <h2 className="text-sm font-bold text-[#508b58] mb-1">
+                  <h2 className="text-base font-bold text-[#508b58] mb-1">
                     הזמנה להצטרפות כשותפים מומחים:
                   </h2>
-                  <p className="text-sm text-black leading-tight">
+                  <p className="text-base text-black leading-tight">
                     NEST מקימה קבוצה מצומצמת של משרדי עורכי דין ומגשרים מובילים.
                     הקבוצה תקבל גישה לכלי עבודה מקצועיים, מודל תגמול ייעודי, ליווי אישי,
                     וחומרי הסברה איכותיים.
@@ -121,7 +121,7 @@ export default function Home() {
                 </div>
                 <Link
                   href="/contact"
-                  className="mt-4 inline-block bg-[#508B58] text-white px-6 py-3 text-sm hover:bg-[#3d6b43] transition-colors"
+                  className="mt-4 inline-block bg-[#508B58] text-white px-6 py-3 text-base hover:bg-[#3d6b43] transition-colors"
                 >
                   צרו קשר
                 </Link>

@@ -161,7 +161,7 @@ export default function Home() {
                     </clipPath>
                   </defs>
                 </svg>
-                <span className="text-sm">מחלה קשה</span>
+                <span className="text-base">מחלה קשה</span>
               </div>
               <div className="flex  items-center flex-col gap-1">
                 <svg
@@ -186,7 +186,7 @@ export default function Home() {
                   />
                 </svg>
 
-                <span className="text-sm"> תאונה</span>
+                <span className="text-base"> תאונה</span>
               </div>
               <div className="flex flex-col items-center  gap-1">
                 <svg
@@ -262,7 +262,7 @@ export default function Home() {
                   />
                 </svg>
 
-                <span className="text-sm"> פטירה</span>
+                <span className="text-base"> פטירה</span>
               </div>
             </div>
             <p className="text-xs text-black">המוטבים הם הילדים בלבד.</p>
@@ -306,7 +306,7 @@ export default function Home() {
             </p>
             <Link
               href="/contact"
-              className="mt-6 inline-block bg-[#508B58] text-white px-6 py-3 text-sm hover:bg-[#3d6b43] transition-colors"
+              className="mt-6 inline-block bg-[#508B58] text-white px-6 py-3 text-base hover:bg-[#3d6b43] transition-colors"
             >
               צרו קשר
             </Link>

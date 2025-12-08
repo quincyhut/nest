@@ -61,7 +61,7 @@ export default function Home() {
               <br />
               הורות ממשיכה גם אחרי פרידה.
             </h1>
-            <p className="mt-4 text-sm text-black">
+            <p className="mt-4 text-base text-black">
               <span className="font-brand">NEST</span> מבטיחה רצף תשלומי מזונות לילדים
               <br />
               גם כאשר מתרחש אירוע בלתי צפוי אצל אחד ההורים.
@@ -70,7 +70,7 @@ export default function Home() {
             </p>
             <Link
               href="/contact"
-              className="mt-6 inline-block bg-[#508B58] text-white px-6 py-3 text-sm hover:bg-[#3d6b43] transition-colors"
+              className="mt-6 inline-block bg-[#508B58] text-white px-6 py-3 text-base hover:bg-[#3d6b43] transition-colors"
             >
               צרו קשר
             </Link>

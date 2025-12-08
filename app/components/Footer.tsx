@@ -13,7 +13,7 @@ export default function Footer() {
           />
         </div>
         <div dir="rtl" className="text-right">
-          <p className="text-sm font-bold text-black">רוצים לדבר איתנו?</p>
+          <p className="text-base font-bold text-black">רוצים לדבר איתנו?</p>
           <p className="text-xs text-black">
             צוות <span className="font-bold text-[#508b58]">NEST</span> זמין לשאלות, לייעוץ ולהצטרפות.
           </p>

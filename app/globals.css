@@ -95,32 +95,14 @@ body {
   color: var(--color-text-secondary);
 }
 
-/* Headings - Inter Light */
-h1, h2, h3 {
-  font-weight: 300;
-  letter-spacing: -0.03em;
-}
-
-h1 {
-  font-size: 31.3px;
-  line-height: 35px;
-}
-
-/* Body text - Inter Regular */
-p, a, span {
+/* Body text */
+p, span, li {
   font-weight: 400;
-  font-size: 14.1px;
-  line-height: 22px;
+  font-size: 13px;
+  line-height: 1.25;
 }
 
-/* Small text - minimum 12px */
-.text-sm {
-  font-size: 12px;
-  line-height: 18px;
-}
-
-/* Extra small text - set to minimum 12px */
-.text-xs {
-  font-size: 12px;
-  line-height: 18px;
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-brand);
+  font-weight: 400;
 }

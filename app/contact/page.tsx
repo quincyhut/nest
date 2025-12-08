@@ -137,7 +137,7 @@ export default function ContactPage() {
           >
             <h1 className="text-2xl font-bold text-[#508b58] mb-2">צרו קשר</h1>
 
-            <p className="text-sm text-black mb-6">
+            <p className="text-base text-black mb-6">
               צוות <span className="font-bold text-[#508b58]">NEST</span> זמין
               לשאלות, לייעוץ ולהצטרפות. מלאו פרטים ונשוב אליכם או צרו קשר ב:{" "}
               <a href="mailto:info@nestinsure.co.il" className="text-[#508b58] underline">
@@ -146,13 +146,13 @@ export default function ContactPage() {
             </p>
 
             {submitStatus === "success" && (
-              <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 mb-4 text-sm">
+              <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 mb-4 text-base">
                 הודעתך נשלחה בהצלחה! ניצור איתך קשר בהקדם.
               </div>
             )}
 
             {submitStatus === "error" && (
-              <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 mb-4 text-sm">
+              <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 mb-4 text-base">
                 אירעה שגיאה בשליחת ההודעה. אנא נסו שוב או צרו קשר ישירות במייל.
               </div>
             )}
@@ -160,7 +160,7 @@ export default function ContactPage() {
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
               {/* Full Name */}
               <div className="flex flex-col gap-1">
-                <label htmlFor="fullName" className="text-sm text-black">
+                <label htmlFor="fullName" className="text-base text-black">
                   שם מלא <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -170,13 +170,13 @@ export default function ContactPage() {
                   value={formData.fullName}
                   onChange={handleInputChange}
                   required
-                  className="border border-gray-300 px-4 py-2 text-sm focus:outline-none focus:border-[#508B58]"
+                  className="border border-gray-300 px-4 py-2 text-base focus:outline-none focus:border-[#508B58]"
                 />
               </div>
 
               {/* Email */}
               <div className="flex flex-col gap-1">
-                <label htmlFor="email" className="text-sm text-black">
+                <label htmlFor="email" className="text-base text-black">
                   דוא&quot;ל <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -186,13 +186,13 @@ export default function ContactPage() {
                   value={formData.email}
                   onChange={handleInputChange}
                   required
-                  className="border border-gray-300 px-4 py-2 text-sm focus:outline-none focus:border-[#508B58]"
+                  className="border border-gray-300 px-4 py-2 text-base focus:outline-none focus:border-[#508B58]"
                 />
               </div>
 
               {/* Phone */}
               <div className="flex flex-col gap-1">
-                <label htmlFor="phone" className="text-sm text-black">
+                <label htmlFor="phone" className="text-base text-black">
                   טלפון <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -202,13 +202,13 @@ export default function ContactPage() {
                   value={formData.phone}
                   onChange={handleInputChange}
                   required
-                  className="border border-gray-300 px-4 py-2 text-sm focus:outline-none focus:border-[#508B58]"
+                  className="border border-gray-300 px-4 py-2 text-base focus:outline-none focus:border-[#508B58]"
                 />
               </div>
 
               {/* User Type */}
               <div className="flex flex-col gap-1">
-                <label htmlFor="userType" className="text-sm text-black">
+                <label htmlFor="userType" className="text-base text-black">
                   בחרו <span className="text-red-500">*</span>
                 </label>
                 <select
@@ -217,7 +217,7 @@ export default function ContactPage() {
                   value={formData.userType}
                   onChange={handleInputChange}
                   required
-                  className="border border-gray-300 px-4 py-2 text-sm focus:outline-none focus:border-[#508B58] bg-white"
+                  className="border border-gray-300 px-4 py-2 text-base focus:outline-none focus:border-[#508B58] bg-white"
                 >
                   <option value="">בחרו...</option>
                   <option value="lawyer">עו&quot;ד</option>
@@ -232,7 +232,7 @@ export default function ContactPage() {
                 <div className="flex flex-col gap-4 border-r-2 border-[#508B58] pr-4 mr-2">
                   {/* Office Name */}
                   <div className="flex flex-col gap-1">
-                    <label htmlFor="officeName" className="text-sm text-black">
+                    <label htmlFor="officeName" className="text-base text-black">
                       שם המשרד
                     </label>
                     <input
@@ -241,13 +241,13 @@ export default function ContactPage() {
                       name="officeName"
                       value={formData.officeName}
                       onChange={handleInputChange}
-                      className="border border-gray-300 px-4 py-2 text-sm focus:outline-none focus:border-[#508B58]"
+                      className="border border-gray-300 px-4 py-2 text-base focus:outline-none focus:border-[#508B58]"
                     />
                   </div>
 
                   {/* Main Field */}
                   <div className="flex flex-col gap-1">
-                    <label htmlFor="mainField" className="text-sm text-black">
+                    <label htmlFor="mainField" className="text-base text-black">
                       תחום עיסוק עיקרי
                     </label>
                     <select
@@ -255,7 +255,7 @@ export default function ContactPage() {
                       name="mainField"
                       value={formData.mainField}
                       onChange={handleInputChange}
-                      className="border border-gray-300 px-4 py-2 text-sm focus:outline-none focus:border-[#508B58] bg-white"
+                      className="border border-gray-300 px-4 py-2 text-base focus:outline-none focus:border-[#508B58] bg-white"
                     >
                       <option value="">בחרו...</option>
                       <option value="family-law">דיני משפחה וגירושין</option>
@@ -266,7 +266,7 @@ export default function ContactPage() {
 
                   {/* Main Area */}
                   <div className="flex flex-col gap-1">
-                    <label htmlFor="mainArea" className="text-sm text-black">
+                    <label htmlFor="mainArea" className="text-base text-black">
                       אזור פעילות עיקרי
                     </label>
                     <select
@@ -274,7 +274,7 @@ export default function ContactPage() {
                       name="mainArea"
                       value={formData.mainArea}
                       onChange={handleInputChange}
-                      className="border border-gray-300 px-4 py-2 text-sm focus:outline-none focus:border-[#508B58] bg-white"
+                      className="border border-gray-300 px-4 py-2 text-base focus:outline-none focus:border-[#508B58] bg-white"
                     >
                       <option value="">בחרו...</option>
                       <option value="tel-aviv">תל אביב והמרכז</option>
@@ -290,7 +290,7 @@ export default function ContactPage() {
 
               {/* Message */}
               <div className="flex flex-col gap-1">
-                <label htmlFor="message" className="text-sm text-black">
+                <label htmlFor="message" className="text-base text-black">
                   הודעה
                 </label>
                 <textarea
@@ -299,7 +299,7 @@ export default function ContactPage() {
                   value={formData.message}
                   onChange={handleInputChange}
                   rows={3}
-                  className="border border-gray-300 px-4 py-2 text-sm focus:outline-none focus:border-[#508B58] resize-none"
+                  className="border border-gray-300 px-4 py-2 text-base focus:outline-none focus:border-[#508B58] resize-none"
                 />
               </div>
 
@@ -323,7 +323,7 @@ export default function ContactPage() {
                 <button
                   type="submit"
                   disabled={!isFormValid || isSubmitting}
-                  className={`px-6 py-3 text-sm mt-2 transition-colors ${
+                  className={`px-6 py-3 text-base mt-2 transition-colors ${
                     isFormValid && !isSubmitting
                       ? "bg-[#508B58] text-white hover:bg-[#3d6b43] cursor-pointer"
                       : "bg-gray-300 text-gray-500 cursor-not-allowed"

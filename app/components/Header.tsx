@@ -144,7 +144,7 @@ export default function Header() {
                 href="/"
                 prefetch={true}
                 onClick={() => setIsMenuOpen(false)}
-                className={`py-2 text-right text-sm ${
+                className={`py-2 text-right text-base ${
                   pathname === "/"
                     ? "text-[#508b58]"
                     : "text-black"
@@ -157,7 +157,7 @@ export default function Header() {
                 href="/about"
                 prefetch={true}
                 onClick={() => setIsMenuOpen(false)}
-                className={`py-2 text-right text-sm ${
+                className={`py-2 text-right text-base ${
                   pathname === "/about"
                     ? "text-[#508b58]"
                     : "text-black"
@@ -170,7 +170,7 @@ export default function Header() {
                 href="/insurance"
                 prefetch={true}
                 onClick={() => setIsMenuOpen(false)}
-                className={`py-2 text-right text-sm ${
+                className={`py-2 text-right text-base ${
                   pathname === "/insurance"
                     ? "text-[#508b58]"
                     : "text-black"
@@ -183,7 +183,7 @@ export default function Header() {
                 href="/faq"
                 prefetch={true}
                 onClick={() => setIsMenuOpen(false)}
-                className={`py-2 text-right text-sm ${
+                className={`py-2 text-right text-base ${
                   pathname === "/faq"
                     ? "text-[#508b58]"
                     : "text-black"
@@ -196,7 +196,7 @@ export default function Header() {
                 href="/parents"
                 prefetch={true}
                 onClick={() => setIsMenuOpen(false)}
-                className={`py-2 text-right text-sm ${
+                className={`py-2 text-right text-base ${
                   pathname === "/parents"
                     ? "text-[#508b58]"
                     : "text-black"
@@ -209,7 +209,7 @@ export default function Header() {
                 href="/contact"
                 prefetch={true}
                 onClick={() => setIsMenuOpen(false)}
-                className={`py-2 text-right text-sm ${
+                className={`py-2 text-right text-base ${
                   pathname === "/contact"
                     ? "text-[#508b58]"
                     : "text-black"
@@ -221,7 +221,7 @@ export default function Header() {
 
             {/* Contact section at bottom */}
             <div dir="rtl" className="px-6 py-4 border-t border-gray-200">
-              <p className="text-sm font-bold text-black">רוצים לדבר איתנו?</p>
+              <p className="text-base font-bold text-black">רוצים לדבר איתנו?</p>
               <p className="text-xs text-black mt-1">
                 צוות <span className="font-bold text-[#508b58]">NEST</span> זמין לשאלות, לייעוץ ולהצטרפות.
               </p>

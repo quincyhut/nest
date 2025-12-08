@@ -56,7 +56,7 @@ export default function Home() {
             className="flex-1 inline justify-center items-center flex-col pt-6 md:pt-15 max-w-full md:max-w-85 text-center md:text-right md:max-h-[calc(100vh-8rem)] md:overflow-y-auto"
           >
             <h1 className="text-2xl font-bold text-[#508b58]">אודות</h1>
-            <p className="mt-4 text-sm text-black ">
+            <p className="mt-4 text-base text-black ">
               NEST הוקמה מתוך הבנה שהשינוי המשפחתי אינו אמור לפגוע בילדים.
               בישראל מתרחשים מדי שנה אלפי מקרים שבהם הורה אינו מסוגל להמשיך לשלם
               מזונות בשל מחלה, תאונה או פטירה. במצבים אלה ההורה האחר מוצא עצמו
