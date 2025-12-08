@@ -69,8 +69,8 @@ export default function Home() {
             </h2>
 
             <p className="text-xs text-black leading-relaxed ">
-              <span className="font-brand font-bold text-[#508b58]">NEST</span> מבטחת
-              מזונות.
+              <span className="font-brand font-bold text-black">NEST</span>{" "}
+              מבטחת מזונות.
             </p>
 
             <p className="text-xs text-black leading-relaxed ">
@@ -84,14 +84,16 @@ export default function Home() {
               גם כאשר מגיעים להסכם מאוזן, שינוי נסיבות בלתי צפוי עלול לערער
               אותו.
               <br />
-              <span className="font-brand font-bold text-[#508b58]">NEST</span> מעניקה לכם
-              רשת ביטחון כלכלית שמבטיחה את המשך תשלומי המזונות במקרה שבו ההורה
-              המשלם אינו מסוגל לעמוד בהתחייבותו.
+              <span className="font-brand font-bold text-black">
+                NEST
+              </span>{" "}
+              מעניקה לכם רשת ביטחון כלכלית שמבטיחה את המשך תשלומי המזונות במקרה
+              שבו ההורה המשלם אינו מסוגל לעמוד בהתחייבותו.
             </p>
 
             <p className="text-xs text-black leading-relaxed pb-2">
-              <span className="font-brand font-bold text-[#508b58]">NEST</span> מבטיחה
-              שתשלומי המזונות ימשיכו להגיע
+              <span className="font-brand font-bold text-black">NEST</span>{" "}
+              מבטיחה שתשלומי המזונות ימשיכו להגיע
               <br />
               גם אם אחד ההורים אינו מסוגל לשלם בשל מחלה קשה, נכות מתאונה ופטירה.
             </p>
@@ -112,10 +114,12 @@ export default function Home() {
                 לא עוד ויכוחים על "מה יקרה אם?"
               </h3>
               <p className="text-xs text-gray-700 leading-relaxed ">
-                לא עוד חשש שיעערער את ההסכם ואת הביטחון הכלכלי.
+                לא עוד חשש שמשבר יערער את ההסכם ואת הביטחון הכלכלי.
                 <br />
-                <span className="font-brand font-bold text-[#508b58]">NEST</span> מעניקה
-                בהירות ושקט, ומשאירה את טובת הילדים במרכז.
+                <span className="font-brand font-bold text-black">
+                  NEST
+                </span>{" "}
+                מעניקה בהירות ושקט, ומשאירה את טובת הילדים במרכז.
               </p>
             </div>
             <Link

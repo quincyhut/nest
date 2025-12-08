@@ -248,7 +248,7 @@ export default function Header() {
               </p>
               <p className="text-xs text-black mt-1">
                 צוות{" "}
-                <span className="font-brand font-bold text-[#508b58]">
+                <span className="font-brand font-bold text-black">
                   NEST
                 </span>{" "}
                 זמין לשאלות, לייעוץ ולהצטרפות.

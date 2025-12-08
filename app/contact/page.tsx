@@ -19,9 +19,12 @@ export default function ContactPage() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
 
-  const showProfessionalFields = formData.userType === "lawyer" || formData.userType === "mediator";
+  const showProfessionalFields =
+    formData.userType === "lawyer" || formData.userType === "mediator";
 
   const isFormValid =
     formData.fullName.trim() !== "" &&
@@ -31,7 +34,9 @@ export default function ContactPage() {
     formData.consent;
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
   ) => {
     const { name, value, type } = e.target;
     const checked = (e.target as HTMLInputElement).checked;
@@ -137,9 +142,14 @@ export default function ContactPage() {
             <h1 className="text-2xl font-bold text-[#508b58] mb-2">צרו קשר</h1>
 
             <p className="text-base text-black mb-6">
-              צוות <span className="font-brand font-bold text-[#508b58]">NEST</span> זמין
-              לשאלות, לייעוץ ולהצטרפות. מלאו פרטים ונשוב אליכם או צרו קשר ב:{" "}
-              <a href="mailto:info@nestinsure.co.il" className="text-[#508b58] underline">
+              צוות{" "}
+              <span className="font-brand font-bold text-black">NEST</span>{" "}
+              זמין לשאלות, לייעוץ ולהצטרפות. מלאו פרטים ונשוב אליכם או צרו קשר
+              ב:{" "}
+              <a
+                href="mailto:info@nestinsure.co.il"
+                className="text-[#508b58] underline"
+              >
                 info@nestinsure.co.il
               </a>
             </p>
@@ -231,7 +241,10 @@ export default function ContactPage() {
                 <div className="flex flex-col gap-4 border-r-2 border-[#508B58] pr-4 mr-2">
                   {/* Office Name */}
                   <div className="flex flex-col gap-1">
-                    <label htmlFor="officeName" className="text-base text-black">
+                    <label
+                      htmlFor="officeName"
+                      className="text-base text-black"
+                    >
                       שם המשרד
                     </label>
                     <input
@@ -304,7 +317,7 @@ export default function ContactPage() {
 
               {/* Consent and Submit */}
               <div className="flex flex-col gap-3 mt-2">
-                <div className="flex items-start gap-2">
+                {/* <div className="flex items-start gap-2">
                   <input
                     type="checkbox"
                     id="consent"
@@ -317,7 +330,7 @@ export default function ContactPage() {
                     אני מאשר/ת ל-NEST ליצור איתי קשר ולשלוח אליי מידע מקצועי ועדכונים
                     לגבי שיתוף פעולה. <span className="text-red-500">*</span>
                   </label>
-                </div>
+                </div> */}
 
                 <button
                   type="submit"

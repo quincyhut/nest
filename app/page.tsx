@@ -57,7 +57,7 @@ export default function Home() {
             className="flex-1 inline justify-center items-center flex-col pt-6 md:pt-30 max-w-full md:max-w-85 text-center pb-6"
           >
             <h1 className="text-2xl font-bold text-[#508b58]">
-              <span className="font-brand text-2xl!">NEST</span> ביטוח מזונות.
+              <span className="font-brand text-2xl! text-black">NEST</span> ביטוח מזונות.
               <br />
               הורות ממשיכה גם אחרי פרידה.
             </h1>
