@@ -11,6 +11,29 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "NEST - ביטוח מזונות",
   description: "ביטוח מזונות. הורות ממשיכה גם אחרי פרידה.",
+  metadataBase: new URL("https://nestinsure.co.il"),
+  openGraph: {
+    title: "NEST - ביטוח מזונות",
+    description: "ביטוח מזונות. הורות ממשיכה גם אחרי פרידה.",
+    url: "https://nestinsure.co.il",
+    siteName: "NEST",
+    images: [
+      {
+        url: "/page-0/boy.png",
+        width: 1200,
+        height: 630,
+        alt: "NEST - ביטוח מזונות",
+      },
+    ],
+    locale: "he_IL",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "NEST - ביטוח מזונות",
+    description: "ביטוח מזונות. הורות ממשיכה גם אחרי פרידה.",
+    images: ["/page-0/boy.png"],
+  },
 };
 
 export default function RootLayout({
