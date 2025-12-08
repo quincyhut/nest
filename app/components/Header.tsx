@@ -67,14 +67,22 @@ export default function Header() {
             <Link
               href="/contact"
               prefetch={true}
-              className="text-black hover:text-zinc-900 whitespace-nowrap"
+              className={`whitespace-nowrap ${
+                pathname === "/contact"
+                  ? "text-[#508b58]"
+                  : "text-black hover:text-zinc-900"
+              }`}
             >
               צרו קשר
             </Link>
             <Link
               href="/parents"
               prefetch={true}
-              className="text-black hover:text-zinc-900 whitespace-nowrap"
+              className={`whitespace-nowrap ${
+                pathname === "/parents"
+                  ? "text-[#508b58]"
+                  : "text-black hover:text-zinc-900"
+              }`}
             >
               מידע והצטרפות להורים
             </Link>
