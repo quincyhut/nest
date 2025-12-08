@@ -103,10 +103,10 @@ export default function Header() {
             <Link
               href="/partners"
               prefetch={true}
-              className="bg-[#508B58]/40 px-4 py-2 text-center leading-tight whitespace-nowrap text-black"
+              className="bg-[#508B58]/40 px-3 py-2 text-center leading-tight text-black"
             >
-              <span className="block">מסלול שותפים מקצועי</span>
-              <span className="block">משרדי עורכי דין ומגשרים</span>
+              <span className="block text-xs">מסלול שותפים מקצועי</span>
+              <span className="block text-xs">משרדי עורכי דין ומגשרים</span>
             </Link>
           </div>
         </nav>
@@ -231,7 +231,7 @@ export default function Header() {
             <div dir="rtl" className="px-6 py-4 border-t border-gray-200">
               <p className="text-base font-bold text-black">רוצים לדבר איתנו?</p>
               <p className="text-xs text-black mt-1">
-                צוות <span className="font-bold text-[#508b58]">NEST</span> זמין לשאלות, לייעוץ ולהצטרפות.
+                צוות <span className="font-brand font-bold text-[#508b58]">NEST</span> זמין לשאלות, לייעוץ ולהצטרפות.
               </p>
               <a href="mailto:info@nestinsure.co.il" className="text-xs text-[#508b58] underline">
                 info@nestinsure.co.il

@@ -80,7 +80,7 @@ export default function Home() {
 
               <div className="">
                 <p className="font-bold">
-                  שאלה: האם NEST מתאימה להורות משותפת?
+                  שאלה: האם <span className="font-brand">NEST</span> מתאימה להורות משותפת?
                 </p>
                 <p className="text-gray-700 text-base">
                   תשובה: כן. היא שומרת על האיזון הכלכלי בין ההורים ומונעת קריסה
@@ -97,7 +97,7 @@ export default function Home() {
                 <p className="font-bold">שאלה: איך מפעילים את הפוליסה?</p>
                 <p className="text-gray-700 text-base">
                   תשובה: באמצעות מסמכים רפואיים או רשמיים. התהליך פשוט וברור ללא
-                  התמודדות מול ההורה השני, ובסיוע נציגי NEST.
+                  התמודדות מול ההורה השני, ובסיוע נציגי <span className="font-brand">NEST</span>.
                 </p>
               </div>
 

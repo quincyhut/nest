@@ -137,7 +137,7 @@ export default function ContactPage() {
             <h1 className="text-2xl font-bold text-[#508b58] mb-2">צרו קשר</h1>
 
             <p className="text-base text-black mb-6">
-              צוות <span className="font-bold text-[#508b58]">NEST</span> זמין
+              צוות <span className="font-brand font-bold text-[#508b58]">NEST</span> זמין
               לשאלות, לייעוץ ולהצטרפות. מלאו פרטים ונשוב אליכם או צרו קשר ב:{" "}
               <a href="mailto:info@nestinsure.co.il" className="text-[#508b58] underline">
                 info@nestinsure.co.il

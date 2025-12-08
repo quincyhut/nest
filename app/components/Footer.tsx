@@ -15,7 +15,7 @@ export default function Footer() {
         <div dir="rtl" className="text-right">
           <p className="text-base font-bold text-black">רוצים לדבר איתנו?</p>
           <p className="text-xs text-black">
-            צוות <span className="font-bold text-[#508b58]">NEST</span> זמין לשאלות, לייעוץ ולהצטרפות.
+            צוות <span className="font-brand font-bold text-[#508b58]">NEST</span> זמין לשאלות, לייעוץ ולהצטרפות.
           </p>
           <a href="mailto:info@nestinsure.co.il" className="text-xs text-[#508b58]">
             info@nestinsure.co.il
