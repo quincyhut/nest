@@ -44,7 +44,7 @@ export default function Header() {
           isScrolled ? "bg-white" : "bg-transparent"
         } md:bg-transparent`}
       >
-        <nav className="flex border-b-[0.2px] border-[#b1b1b1] justify-between pt-1 md:pt-6 gap-4 md:gap-10 pb-1 md:pb-2 items-center md:items-end">
+        <nav className="flex border-b-[0.2px] border-[#b1b1b1] justify-between pt-1 md:pt-2 gap-4 md:gap-10 pb-1 md:pb-2 items-center md:items-end">
           <Link
             href="/"
             prefetch={true}
@@ -121,10 +121,9 @@ export default function Header() {
             <Link
               href="/partners"
               prefetch={true}
-              className="bg-[#508B58]/40 px-10 py-1 text-center leading-tight text-black"
+              className="bg-[#508B58]/40 px-6 py-1 text-center text-xs whitespace-nowrap text-black"
             >
-              <span className="block text-xs">מסלול שותפים מקצועי</span>
-              <span className="block text-xs">משרדי עורכי דין ומגשרים</span>
+              משרדי עורכי דין ומגשרים
             </Link>
           </div>
         </nav>
@@ -170,10 +169,9 @@ export default function Header() {
                 href="/partners"
                 prefetch={true}
                 onClick={() => setIsMenuOpen(false)}
-                className="bg-[#508B58]/40 px-4 py-2 text-xs text-right leading-tight text-black"
+                className="bg-[#508B58]/40 px-4 py-2 text-xs text-right text-black"
               >
-                <span className="block">מסלול שותפים מקצועי</span>
-                <span className="block">משרדי עורכי דין ומגשרים</span>
+                משרדי עורכי דין ומגשרים
               </Link>
 
               <Link
