@@ -4,6 +4,10 @@ import Header from "../components/Header";
 import ClippedImage from "../components/ClippedImage";
 import Footer from "../components/Footer";
 
+export const metadata = {
+  title: "פירוט ביטוחי | NEST",
+};
+
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col font-sans mx-auto pt-3 md:pt-7">
