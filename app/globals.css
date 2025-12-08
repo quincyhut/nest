@@ -95,11 +95,17 @@ body {
   color: var(--color-text-secondary);
 }
 
-/* Body text */
+/* Body text - default for mobile */
 p, span, li {
   font-weight: 400;
-  font-size: 13px;
   line-height: 1.25;
+}
+
+/* Desktop font size */
+@media (min-width: 768px) {
+  p, span, li {
+    font-size: 13px;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
