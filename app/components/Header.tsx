@@ -40,15 +40,23 @@ export default function Header() {
   return (
     <>
       <header
-        className={`w-full mx-auto border-b-[0.2px] border-[#b1b1b1] max-w-5xl px-4 md:px-6 sticky top-0 z-50 md:static md:z-auto transition-colors ${isScrolled ? "bg-white" : "bg-transparent"} md:bg-transparent`}
+        className={`w-full mx-auto  max-w-6xl px-4 md:px-6 sticky top-0 z-50 md:static md:z-auto transition-colors ${
+          isScrolled ? "bg-white" : "bg-transparent"
+        } md:bg-transparent`}
       >
-        <nav className="flex justify-between pt-1 md:pt-6 gap-4 md:gap-10 pb-1 md:pb-2 items-center md:items-end">
+        <nav className="flex border-b-[0.2px] border-[#b1b1b1] justify-between pt-1 md:pt-6 gap-4 md:gap-10 pb-1 md:pb-2 items-center md:items-end">
           <Link
             href="/"
             prefetch={true}
-            className="text-lg font-semibold text-zinc-900 dark:text-zinc-100 mb-1 md:mb-2"
+            className="text-lg min-w-32 font-semibold text-zinc-900 dark:text-zinc-100 mb-1 md:mb-2"
           >
-            <Image src="/logo.svg" alt="Logo" width={130} height={40} className="w-[90px] md:w-[130px]" />
+            <Image
+              src="/logo.svg"
+              alt="Logo"
+              width={130}
+              height={40}
+              className="w-[90px] md:w-[130px]"
+            />
           </Link>
 
           {/* Mobile hamburger - hidden on desktop */}
@@ -57,8 +65,18 @@ export default function Header() {
             className="md:hidden p-1"
             aria-label="Toggle menu"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
             </svg>
           </button>
 
@@ -103,7 +121,7 @@ export default function Header() {
             <Link
               href="/partners"
               prefetch={true}
-              className="bg-[#508B58]/40 px-3 py-2 text-center leading-tight text-black"
+              className="bg-[#508B58]/40 px-10 py-1 text-center leading-tight text-black"
             >
               <span className="block text-xs">מסלול שותפים מקצועי</span>
               <span className="block text-xs">משרדי עורכי דין ומגשרים</span>
@@ -130,8 +148,18 @@ export default function Header() {
                 className="p-1"
                 aria-label="Close menu"
               >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 </svg>
               </button>
             </div>
@@ -153,9 +181,7 @@ export default function Header() {
                 prefetch={true}
                 onClick={() => setIsMenuOpen(false)}
                 className={`py-2 text-right text-base ${
-                  pathname === "/"
-                    ? "text-[#508b58]"
-                    : "text-black"
+                  pathname === "/" ? "text-[#508b58]" : "text-black"
                 }`}
               >
                 בית
@@ -166,9 +192,7 @@ export default function Header() {
                 prefetch={true}
                 onClick={() => setIsMenuOpen(false)}
                 className={`py-2 text-right text-base ${
-                  pathname === "/about"
-                    ? "text-[#508b58]"
-                    : "text-black"
+                  pathname === "/about" ? "text-[#508b58]" : "text-black"
                 }`}
               >
                 אודות
@@ -179,9 +203,7 @@ export default function Header() {
                 prefetch={true}
                 onClick={() => setIsMenuOpen(false)}
                 className={`py-2 text-right text-base ${
-                  pathname === "/insurance"
-                    ? "text-[#508b58]"
-                    : "text-black"
+                  pathname === "/insurance" ? "text-[#508b58]" : "text-black"
                 }`}
               >
                 פירוט ביטוחי
@@ -192,9 +214,7 @@ export default function Header() {
                 prefetch={true}
                 onClick={() => setIsMenuOpen(false)}
                 className={`py-2 text-right text-base ${
-                  pathname === "/faq"
-                    ? "text-[#508b58]"
-                    : "text-black"
+                  pathname === "/faq" ? "text-[#508b58]" : "text-black"
                 }`}
               >
                 שאלות ותשובות
@@ -205,9 +225,7 @@ export default function Header() {
                 prefetch={true}
                 onClick={() => setIsMenuOpen(false)}
                 className={`py-2 text-right text-base ${
-                  pathname === "/parents"
-                    ? "text-[#508b58]"
-                    : "text-black"
+                  pathname === "/parents" ? "text-[#508b58]" : "text-black"
                 }`}
               >
                 מידע והצטרפות להורים
@@ -218,9 +236,7 @@ export default function Header() {
                 prefetch={true}
                 onClick={() => setIsMenuOpen(false)}
                 className={`py-2 text-right text-base ${
-                  pathname === "/contact"
-                    ? "text-[#508b58]"
-                    : "text-black"
+                  pathname === "/contact" ? "text-[#508b58]" : "text-black"
                 }`}
               >
                 צרו קשר
@@ -229,11 +245,20 @@ export default function Header() {
 
             {/* Contact section at bottom */}
             <div dir="rtl" className="px-6 py-4 border-t border-gray-200">
-              <p className="text-base font-bold text-black">רוצים לדבר איתנו?</p>
-              <p className="text-xs text-black mt-1">
-                צוות <span className="font-brand font-bold text-[#508b58]">NEST</span> זמין לשאלות, לייעוץ ולהצטרפות.
+              <p className="text-base font-bold text-black">
+                רוצים לדבר איתנו?
               </p>
-              <a href="mailto:info@nestinsure.co.il" className="text-xs text-[#508b58] underline">
+              <p className="text-xs text-black mt-1">
+                צוות{" "}
+                <span className="font-brand font-bold text-[#508b58]">
+                  NEST
+                </span>{" "}
+                זמין לשאלות, לייעוץ ולהצטרפות.
+              </p>
+              <a
+                href="mailto:info@nestinsure.co.il"
+                className="text-xs text-[#508b58] underline"
+              >
                 info@nestinsure.co.il
               </a>
             </div>
