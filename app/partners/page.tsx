@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen md:h-screen md:overflow-hidden flex-col font-sans mx-auto pt-3 md:pt-7">
+    <div className="flex min-h-screen flex-col font-sans mx-auto pt-3 md:pt-7">
       <Header />
 
       <svg
@@ -27,7 +27,7 @@ export default function Home() {
         <div className="flex flex-col md:flex-row gap-6 md:gap-8 max-w-[60rem] justify-end w-full md:mr-8 lg:mr-16">
           <div
             dir="rtl"
-            className="flex-1 flex flex-col items-center justify-center text-center md:text-right py-2 px-4 md:px-6 md:max-h-[calc(100vh-8rem)] md:overflow-y-auto"
+            className="flex-1 flex flex-col items-center justify-center text-center md:text-right py-2 px-4 md:px-6 pb-6"
           >
             <h1 className="text-2xl font-bold text-[#508b58] mb-6 w-full max-w-6xl">
               מסלול שותפים מקצועי
