@@ -41,7 +41,7 @@ export default function Home() {
               <div className="space-y-4">
                 <div>
                   <h2 className="text-base font-bold text-[#508b58] mb-1">
-                    <span className="font-brand">NEST</span> ביטוח מזונות
+                    <span className="font-brand text-black">NEST</span> ביטוח מזונות
                   </h2>
                   <p className="text-base text-black leading-tight">
                     ההורות ממשיכה גם אחרי הפרידה.
@@ -63,7 +63,7 @@ export default function Home() {
                 <div>
                   <h2 className="text-base font-bold text-[#508b58] mb-1">
                     מהו ביטוח המזונות של{" "}
-                    <span className="font-brand">NEST</span>?
+                    <span className="font-brand text-black">NEST</span>?
                   </h2>
                   <p className="text-base text-black leading-tight">
                     <span className="font-brand">NEST</span> היא פוליסת ביטוח
