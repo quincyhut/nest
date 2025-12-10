@@ -56,7 +56,7 @@ export default function Home() {
         <div className="flex flex-col-reverse md:flex-row gap-6 md:gap-8 max-w-[75rem] justify-end w-full">
           <div
             dir="rtl"
-            className="flex-1 inline justify-center items-center flex-col pt-6 md:pt-15 max-w-full md:max-w-85 text-center md:text-right md:max-h-[calc(100vh-8rem)] md:overflow-y-auto"
+            className="flex-1 inline justify-center items-center flex-col pt-6 md:pt-15 max-w-full md:max-w-85 text-center md:text-right"
           >
             <h1 className="text-2xl font-bold text-[#508b58]">אודות</h1>
             <p className="mt-4 text-base text-black ">
