@@ -64,7 +64,7 @@ export default function Home() {
               הורים במשפחה בשינוי
             </h1>
 
-            <h2 className="text-xs !font-bold text-black ">
+            <h2 className="text-sm !font-bold text-black ">
               הורות ממשיכה גם אחרי פרידה והילדים זקוקים ליציבות
             </h2>
 
@@ -74,23 +74,25 @@ export default function Home() {
             </p>
 
             <p className="text-xs text-black leading-relaxed ">
-ההסכם צריך לייצר ודאות, יציבות, ומנגנוני אכיפה ברורים לאורך זמן.
+              ההסכם צריך לייצר ודאות, יציבות, ומנגנוני אכיפה ברורים לאורך זמן.
               <br />
-          חלוקת הוצאות גידול הילדים היא אחת הסיבות המרכזיות למחלוקות בין הורים נפרדים.
-        
+              חלוקת הוצאות גידול הילדים היא אחת הסיבות המרכזיות למחלוקות בין
+              הורים נפרדים.
             </p>
 
             <p className="text-xs text-black leading-relaxed  pb-2">
-         גם כאשר מגיעים להסכם גירושין מאוזן, שינוי נסיבות בלתי צפוי עלול לערער אותו.
+              גם כאשר מגיעים להסכם גירושין מאוזן, שינוי נסיבות בלתי צפוי עלול
+              לערער אותו.
               <br />
               <span className="font-brand font-bold text-black text-xs">
                 NEST
               </span>{" "}
-     מעניקה לכם רשת ביטחון כלכלית שמבטיחה מקור הכספי להמשך תשלומי המזונות 
-                   <br />
-במקרה שבו ההורה המשלם אינו מסוגל לעמוד בהתחייבותו בשל מחלה קשה, נכות מתאונה או פטירה.
+              מעניקה לכם רשת ביטחון כלכלית שמבטיחה מקור הכספי להמשך תשלומי
+              המזונות
+              <br />
+              במקרה שבו ההורה המשלם אינו מסוגל לעמוד בהתחייבותו בשל מחלה קשה,
+              נכות מתאונה או פטירה.
             </p>
-
 
             <h2 className="text-base font-bold text-[#508b58] ">
               למה הורים בוחרים <span className="font-brand">NEST</span>?
@@ -120,7 +122,7 @@ export default function Home() {
               href="/contact"
               className="mt-6 inline-block bg-[#508B58] text-white px-6 py-3 text-base hover:bg-[#3d6b43] transition-colors"
             >
-          ליעוץ לקבלת הצעה לביטוח מזונות
+              ליעוץ לקבלת הצעה לביטוח מזונות
             </Link>
           </div>
           <ClippedImage

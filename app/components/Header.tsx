@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 
 const navItems = [
   { href: "/faq", label: "שאלות ותשובות" },
-  { href: "/insurance", label: "פירוט ביטוחי" },
+  { href: "/insurance", label: "כיסוי ביטוחי" },
   { href: "/about", label: "אודות" },
   { href: "/", label: "בית" },
 ];
@@ -204,7 +204,7 @@ export default function Header() {
                   pathname === "/insurance" ? "text-[#508b58]" : "text-black"
                 }`}
               >
-                פירוט ביטוחי
+                כיסוי ביטוחי
               </Link>
 
               <Link
