@@ -64,6 +64,28 @@ export default function ContactPage() {
           },
           body: JSON.stringify({
             ...formData,
+            mainField:
+              formData.mainField === "family-law"
+                ? "דיני משפחה וגירושין"
+                : formData.mainField === "family-mediation"
+                ? "גישור משפחתי"
+                : formData.mainField === "other"
+                ? "אחר"
+                : formData.mainField,
+            mainArea:
+              formData.mainArea === "tel-aviv"
+                ? "תל אביב והמרכז"
+                : formData.mainArea === "sharon"
+                ? "השרון"
+                : formData.mainArea === "jerusalem"
+                ? "ירושלים"
+                : formData.mainArea === "haifa"
+                ? "חיפה והצפון"
+                : formData.mainArea === "south"
+                ? "דרום"
+                : formData.mainArea === "nationwide"
+                ? "כלל־ארצי"
+                : formData.mainArea,
             targetEmail:
               formData.userType === "lawyer" || formData.userType === "mediator"
                 ? "partners"
