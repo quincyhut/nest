@@ -313,7 +313,7 @@ export default function Home() {
               href="/contact"
               className="mt-6 inline-block bg-[#508B58] text-white px-10 py-1.5 text-base hover:bg-[#3d6b43] transition-colors"
             >
-              צרו קשר
+              לקבלת הצעה לביטוח מזונות
             </Link>
           </div>
           <ClippedImage
