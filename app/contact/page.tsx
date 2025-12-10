@@ -95,7 +95,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="flex min-h-screen flex-col font-sans mx-auto pt-3 md:pt-7">
+    <div className="flex min-h-screen flex-col font-sans mx-auto pt-3">
       <Header />
       <svg
         className="fixed bottom-0 right-0 h-40 w-36 md:h-62.5 md:w-56.5 -z-10"
@@ -348,12 +348,22 @@ export default function ContactPage() {
                 />
               </div>
 
-              {/* Consent text and Submit */}
+              {/* Consent checkbox and Submit */}
               <div className="flex flex-col gap-3 mt-2">
-                <p className="text-xs text-black leading-tight">
-                  אני מאשר/ת ל-NEST ליצור איתי קשר ולשלוח אליי מידע מקצועי
-                  ועדכונים לגבי שיתוף פעולה.
-                </p>
+                <label className="flex items-start gap-2 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    name="consent"
+                    checked={formData.consent}
+                    onChange={handleInputChange}
+                    className="mt-1 w-4 h-4 accent-[#508B58]"
+                  />
+                  <span className="text-xs text-black leading-tight">
+                    אני מאשר/ת את תנאי מדיניות הפרטיות של אתר NEST, ואני מאשר/ת
+                    ל-NEST ליצור איתי קשר ולשלוח לי פרטים לגבי השירות ו/או
+                    המוצרים אשר היא מציעה באתר.
+                  </span>
+                </label>
 
                 <button
                   type="submit"

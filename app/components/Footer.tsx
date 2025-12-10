@@ -14,9 +14,9 @@ export default function Footer() {
           />
         </div>
         <div className="flex items-center gap-2 text-xs text-gray-600">
-          <Link href="/privacy" className="hover:text-[#508b58] transition-colors">מדיניות פרטיות</Link>
+          <span>2025, <span className="font-brand">Nest</span> -כל הזכויות שמורות ל</span>
           <span>|</span>
-          <span>כל הזכויות שמורות ל- <span className="font-brand">Nest</span>, 2025.</span>
+          <Link href="/privacy" className="hover:text-[#508b58] transition-colors">מדיניות פרטיות</Link>
         </div>
         <div dir="rtl" className="text-right">
           <p className="text-base font-bold text-black">רוצים לדבר איתנו?</p>

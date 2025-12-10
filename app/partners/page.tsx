@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col font-sans mx-auto pt-3 md:pt-7">
+    <div className="flex min-h-screen flex-col font-sans mx-auto pt-3">
       <Header />
 
       <svg
@@ -53,8 +53,8 @@ export default function Home() {
                     עלול לערער אותו.
                     <span className="!font-bold">
                       <br />
-                      <span className="font-brand !font-bold">NEST</span>{" "}
-                      מעניקה ללקוחותיכם רשת ביטחון כלכלית שמבטיחה את המשך תשלומי
+                      <span className="font-brand !font-bold">NEST</span> מעניקה
+                      ללקוחותיכם רשת ביטחון כלכלית שמבטיחה את המשך תשלומי
                       המזונות במקרה שבו ההורה המשלם אינו מסוגל לעמוד בהתחייבותו.
                     </span>
                   </p>
@@ -165,7 +165,7 @@ export default function Home() {
                   href="/contact"
                   className="mt-4 inline-block bg-[#508B58] text-white px-10 py-1.5 text-base hover:bg-[#3d6b43] transition-colors"
                 >
-                  צרו קשר
+                  לקבלת הצעה לביטוח מזונות
                 </Link>
               </div>
             </div>

@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col font-sans mx-auto pt-3 md:pt-7">
+    <div className="flex min-h-screen flex-col font-sans mx-auto pt-3">
       <Header />
       <svg
         className="fixed bottom-0 right-0 h-40 w-36 md:h-62.5 md:w-56.5 -z-10"
@@ -292,8 +292,9 @@ export default function Home() {
               אירוע פתאומי אצל אחד ההורים עלול להשאיר את ההורה השני לבד עם מלוא
               הנטל.
               <br />
-              <span className="font-brand">NEST</span> שומרת על האיזון, נכנסת בנעלי ההורה שנפגעה יכולתו הכלכלית לשאת
-              בהוצאות גידול הילדים, וממשיכה לשלם את חלקו בדיוק כפי שנקבע בהסכם.
+              <span className="font-brand">NEST</span> שומרת על האיזון, נכנסת
+              בנעלי ההורה שנפגעה יכולתו הכלכלית לשאת בהוצאות גידול הילדים,
+              וממשיכה לשלם את חלקו בדיוק כפי שנקבע בהסכם.
             </p>
 
             <h2 className="mt-4 text-base font-bold text-[#508b58]">
@@ -312,7 +313,7 @@ export default function Home() {
               href="/contact"
               className="mt-6 inline-block bg-[#508B58] text-white px-10 py-1.5 text-base hover:bg-[#3d6b43] transition-colors"
             >
-              צרו קשר
+              לקבלת הצעה לביטוח מזונות
             </Link>
           </div>
           <ClippedImage

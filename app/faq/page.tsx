@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col font-sans mx-auto pt-3 md:pt-7">
+    <div className="flex min-h-screen flex-col font-sans mx-auto pt-3">
       <Header />
       <svg
         className="fixed bottom-0 right-0 h-40 w-36 md:h-62.5 md:w-56.5 -z-10"
@@ -77,18 +77,21 @@ export default function Home() {
               <div>
                 <p className="font-bold mb-2">שאלה: האם התשלום הוא חד פעמי?</p>
                 <p className="text-gray-700 text-base">
-                  תשובה: לא במרבית המקרים. הפוליסה משלמת מדי חודש את סכום
-                  המזונות שנקבע למשך 10 שנים ממועד האירוע.
+                  תשובה: לא, במרבית המקרים הפוליסה תשלם מדי חודש את סכום המזונות
+                  המבוטח למשך עשר שנים ממקרה הביטוח. במקרים של נכות מתאונה או
+                  מחלה קשה הסכום יתקבל בפעימה אחת לפי ערך סכום המזונות המבוטח
+                  לעשר שנים.
                 </p>
               </div>
 
               <div>
                 <p className="font-bold mb-2">
-                  שאלה: האם <span className="font-brand">NEST</span> מתאימה להורות משותפת?
+                  שאלה: האם <span className="font-brand">NEST</span> מתאימה
+                  להורות משותפת?
                 </p>
                 <p className="text-gray-700 text-base">
-                  תשובה: כן. היא שומרת על האיזון הכלכלי בין ההורים ומונעת קריסה
-                  של צד אחד במקרה של אירוע פתאומי.
+                  תשובה: כן... ומנסה למנוע קריסה כלכלית של אחד ההורים במקרה של
+                  אירוע פתאומי בלתי צפוי להורה השני.
                 </p>
               </div>
 
@@ -101,15 +104,17 @@ export default function Home() {
                 <p className="font-bold mb-2">שאלה: איך מפעילים את הפוליסה?</p>
                 <p className="text-gray-700 text-base">
                   תשובה: באמצעות מסמכים רפואיים או רשמיים. התהליך פשוט וברור ללא
-                  התמודדות מול ההורה השני, ובסיוע נציגי <span className="font-brand">NEST</span>.
+                  התמודדות מול ההורה השני, ובסיוע נציגי{" "}
+                  <span className="font-brand">NEST</span>.
                 </p>
               </div>
 
               <div>
-                <p className="font-bold mb-2">שאלה: מה העלות?</p>
+                <p className="font-bold mb-2">שאלה: מה עלות הביטוח?</p>
                 <p className="text-gray-700 text-base">
-                  תשובה: מותאמת לגובה המזונות, גילאי הילדים וצרכי המשפחה. נבנית
-                  משמעותית מהחיסכון הכלכלי של תיעוד גבוי למקרים אלו.
+                  תשובה: הסכום מותאם לגובה המזונות שתרצו לבטח, גילאי הילדים
+                  וצרכי המשפחה. צפוי כי הסכום יהיה נמוך משמעותית מהנזק הכלכלי
+                  שעלול להגרם בהעדר ביטוח אם חלילה יהיה בו צורך.
                 </p>
               </div>
 
@@ -119,12 +124,15 @@ export default function Home() {
                 </p>
                 <p className="text-gray-700 text-base">
                   תשובה: כן. כל הורה יכול לרכוש פוליסה ולהבטיח את דמי המזונות
-                  שהתחייב לשלם לילדיו.
+                  שהתחייב לשלם לילדיו. <br />
+                  מעבר לכך, במקרה בו הצד המבטח הפסיק לשלם את הפרמיה החודשית, מכל
+                  סיבה שהיא, בן / בת הזוג יהיו רשאים להכנס בנעליו, לשלם את
+                  התשלום החודשי עבור ביטוח ולשמר את הזכאות לכיסוי הביטוחי עבור
+                  הילדים.
                 </p>
               </div>
             </div>
           </div>
-
           <ClippedImage
             src="/page-3/little-girl.png"
             alt="Boy"
