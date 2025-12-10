@@ -348,12 +348,21 @@ export default function ContactPage() {
                 />
               </div>
 
-              {/* Consent text and Submit */}
+              {/* Consent checkbox and Submit */}
               <div className="flex flex-col gap-3 mt-2">
-                <p className="text-xs text-black leading-tight">
-                  אני מאשר/ת ל-NEST ליצור איתי קשר ולשלוח אליי מידע מקצועי
-                  ועדכונים לגבי שיתוף פעולה.
-                </p>
+                <label className="flex items-start gap-2 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    name="consent"
+                    checked={formData.consent}
+                    onChange={handleInputChange}
+                    className="mt-1 w-4 h-4 accent-[#508B58]"
+                  />
+                  <span className="text-xs text-black leading-tight">
+                    אני מאשר/ת ל-NEST ליצור איתי קשר ולשלוח אליי מידע מקצועי
+                    ועדכונים לגבי שיתוף פעולה.
+                  </span>
+                </label>
 
                 <button
                   type="submit"
