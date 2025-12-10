@@ -30,7 +30,8 @@ export default function ContactPage() {
     formData.fullName.trim() !== "" &&
     formData.email.trim() !== "" &&
     formData.phone.trim() !== "" &&
-    formData.userType !== "";
+    formData.userType !== "" &&
+    formData.consent === true;
 
   const handleInputChange = (
     e: React.ChangeEvent<
