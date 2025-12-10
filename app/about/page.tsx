@@ -56,27 +56,30 @@ export default function Home() {
         <div className="flex flex-col-reverse md:flex-row gap-6 md:gap-8 max-w-[75rem] justify-end w-full">
           <div
             dir="rtl"
-            className="flex-1 inline justify-center items-center flex-col pt-6 md:pt-15 max-w-full md:max-w-85 text-center md:text-right md:max-h-[calc(100vh-8rem)] md:overflow-y-auto"
+            className="flex-1 inline justify-center items-center flex-col pt-6 md:pt-15 max-w-full md:max-w-120 text-center md:text-right"
           >
             <h1 className="text-2xl font-bold text-[#508b58]">אודות</h1>
             <p className="mt-4 text-base text-black ">
               <span className="font-brand">NEST</span> הוקמה מתוך הבנה שהשינוי
-              המשפחתי אינו אמור לפגוע בילדים.
+              המשפחתי אינו אמור לפגוע&nbsp;בילדים.
               <br />
               בישראל מתרחשים מדי שנה אלפי מקרים שבהם הורה אינו מסוגל להמשיך לשלם
-              מזונות בשל מחלה, תאונה או פטירה. <br />
-              במצבים אלה ההורה האחר מוצא עצמו נושא לבדו בנטל הכלכלי. <br />
+              מזונות בשל מחלה, תאונה או&nbsp;פטירה.
+              <br />
+              במצבים אלה ההורה האחר מוצא עצמו נושא לבדו בנטל&nbsp;הכלכלי.
+              <br />
               <span className="font-brand">NEST</span> מעניקה שכבת הגנה שמבטיחה
-              שהמזונות יועברו בדיוק כפי שנקבע בהסכם.
+              שהמזונות יועברו בדיוק כפי שנקבע&nbsp;בהסכם.
               <br />
               החזון שלנו הוא להגן על ילדים, להפחית קונפליקטים, ולשמור על יציבות
-              כלכלית ומשפחתית גם ברגעים של חוסר ודאות.
+              כלכלית ומשפחתית גם ברגעים של חוסר&nbsp;ודאות.
               <br />
               אנו פועלים בשיתוף מומחים בתחום המשפט, הביטוח והמשפחה ומחויבים
-              לשקיפות, מקצועיות ורגישות אנושית. <br />
-              <span className="font-brand">NEST</span> פועלת בשיתוף פעולה מקצועי
-              עם חברת הביטוח מגדל, אחת החברות המובילות והמוערכות בישראל, כדי
-              להבטיח יציבות לאורך זמן, אמינות מלאה ותהליך הפעלה פשוט וברור.
+              לשקיפות, מקצועיות&nbsp;ורגישות.
+              <br />
+              <span className="font-brand">NEST</span> פועלת בשיתוף פעולה עם
+              חברת הביטוח מגדל, מהחברות המובילות והמוערכות בישראל, כדי להבטיח
+              יציבות לאורך זמן, שירות מעולה ותהליך הפעלה פשוט&nbsp;וברור.
             </p>
           </div>
           <ClippedImage
