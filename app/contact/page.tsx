@@ -30,8 +30,7 @@ export default function ContactPage() {
     formData.fullName.trim() !== "" &&
     formData.email.trim() !== "" &&
     formData.phone.trim() !== "" &&
-    formData.userType !== "" &&
-    formData.consent;
+    formData.userType !== "";
 
   const handleInputChange = (
     e: React.ChangeEvent<
@@ -55,14 +54,22 @@ export default function ContactPage() {
     setSubmitStatus("idle");
 
     try {
-      // Send email to info@nestinsure.co.il
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://nest-api.prod.nestinsure.co.il/api/v1/contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            ...formData,
+            targetEmail:
+              formData.userType === "lawyer" || formData.userType === "mediator"
+                ? "partners"
+                : "info",
+          }),
+        }
+      );
 
       if (response.ok) {
         setSubmitStatus("success");
@@ -142,10 +149,18 @@ export default function ContactPage() {
             <h1 className="text-2xl font-bold text-[#508b58] mb-2">צרו קשר</h1>
 
             <p className="text-base text-black mb-6">
-              צוות{" "}
-              <span className="font-brand font-bold text-black">NEST</span>{" "}
-              זמין לשאלות, לייעוץ ולהצטרפות. מלאו פרטים ונשוב אליכם או צרו קשר
-              ב:{" "}
+              צוות <span className="font-brand font-bold text-black">NEST</span>{" "}
+              זמין לשאלות, לייעוץ ולהצטרפות. מלאו פרטים ונשוב אליכם או צרו קשר:
+              <br />
+              פניות מעורכי דין/מגשרים:{" "}
+              <a
+                href="mailto:partners@nestinsure.co.il"
+                className="text-[#508b58] underline"
+              >
+                partners@nestinsure.co.il
+              </a>
+              <br />
+              פניות כלליות:{" "}
               <a
                 href="mailto:info@nestinsure.co.il"
                 className="text-[#508b58] underline"
@@ -154,9 +169,27 @@ export default function ContactPage() {
               </a>
             </p>
 
+            {/* Success Popup Modal */}
             {submitStatus === "success" && (
-              <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 mb-4 text-base">
-                הודעתך נשלחה בהצלחה! ניצור איתך קשר בהקדם.
+              <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+                <div
+                  dir="rtl"
+                  className="bg-white p-6 max-w-sm mx-4 relative text-center shadow-lg"
+                >
+                  <button
+                    onClick={() => setSubmitStatus("idle")}
+                    className="absolute top-2 left-2 text-gray-500 hover:text-gray-700 text-xl font-bold"
+                    aria-label="סגור"
+                  >
+                    ✕
+                  </button>
+                  <p className="text-base text-black mt-4">
+                    הפרטים נשלחו בהצלחה, ניצור עמכם קשר בהקדם.
+                    <br />
+                    תודה, צוות{" "}
+                    <span className="font-brand font-bold">NEST</span>.
+                  </p>
+                </div>
               </div>
             )}
 
@@ -315,22 +348,12 @@ export default function ContactPage() {
                 />
               </div>
 
-              {/* Consent and Submit */}
+              {/* Consent text and Submit */}
               <div className="flex flex-col gap-3 mt-2">
-                {/* <div className="flex items-start gap-2">
-                  <input
-                    type="checkbox"
-                    id="consent"
-                    name="consent"
-                    checked={formData.consent}
-                    onChange={handleInputChange}
-                    className="mt-1 accent-[#508B58]"
-                  />
-                  <label htmlFor="consent" className="text-xs text-black leading-tight">
-                    אני מאשר/ת ל-NEST ליצור איתי קשר ולשלוח אליי מידע מקצועי ועדכונים
-                    לגבי שיתוף פעולה. <span className="text-red-500">*</span>
-                  </label>
-                </div> */}
+                <p className="text-xs text-black leading-tight">
+                  אני מאשר/ת ל-NEST ליצור איתי קשר ולשלוח אליי מידע מקצועי
+                  ועדכונים לגבי שיתוף פעולה.
+                </p>
 
                 <button
                   type="submit"

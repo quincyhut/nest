@@ -81,11 +81,11 @@ export default function Header() {
           </button>
 
           {/* Desktop nav - hidden on mobile */}
-          <div className="hidden md:flex gap-10 w-full pb-2 items-center">
+          <div className="hidden md:flex gap-10 w-full pb-2 md:justify-around items-center">
             <Link
               href="/contact"
               prefetch={true}
-              className={`whitespace-nowrap ${
+              className={`whitespace-nowrap text-base ${
                 pathname === "/contact"
                   ? "text-[#508b58]"
                   : "text-black hover:text-zinc-900"
@@ -96,7 +96,7 @@ export default function Header() {
             <Link
               href="/parents"
               prefetch={true}
-              className={`whitespace-nowrap ${
+              className={`whitespace-nowrap text-base ${
                 pathname === "/parents"
                   ? "text-[#508b58]"
                   : "text-black hover:text-zinc-900"
@@ -109,7 +109,7 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 prefetch={true}
-                className={`whitespace-nowrap ${
+                className={`whitespace-nowrap text-base ${
                   pathname === item.href
                     ? "text-[#508b58]"
                     : "text-black hover:text-zinc-900"
@@ -121,7 +121,7 @@ export default function Header() {
             <Link
               href="/partners"
               prefetch={true}
-              className="bg-[#508B58]/40 px-6 py-1 text-center text-xs whitespace-nowrap text-black"
+              className="bg-[#508B58]/40 px-6 py-1 text-center text-sm whitespace-nowrap text-black"
             >
               משרדי עורכי דין ומגשרים
             </Link>
@@ -248,9 +248,7 @@ export default function Header() {
               </p>
               <p className="text-xs text-black mt-1">
                 צוות{" "}
-                <span className="font-brand font-bold text-black">
-                  NEST
-                </span>{" "}
+                <span className="font-brand font-bold text-black">NEST</span>{" "}
                 זמין לשאלות, לייעוץ ולהצטרפות.
               </p>
               <a

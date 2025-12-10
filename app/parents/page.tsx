@@ -60,16 +60,16 @@ export default function Home() {
             dir="rtl"
             className="flex-1 inline justify-center items-center flex-col max-w-full md:max-w-150 text-center md:text-right pb-6"
           >
-            <h1 className="text-2xl font-bold text-[#7fa687] pb-4">
+            <h1 className="text-2xl font-bold text-[#508b58] pb-4">
               הורים במשפחה בשינוי
             </h1>
 
-            <h2 className="text-base font-bold text-[#508b58]">
+            <h2 className="text-xs !font-bold text-black ">
               הורות ממשיכה גם אחרי פרידה והילדים זקוקים ליציבות
             </h2>
 
-            <p className="text-xs text-black leading-relaxed ">
-              <span className="font-brand font-bold text-black">NEST</span>{" "}
+            <p className="text-xs text-black !font-bold leading-relaxed ">
+              <span className="font-brand !font-bold text-black">NEST</span>{" "}
               מבטחת מזונות.
             </p>
 
@@ -84,7 +84,7 @@ export default function Home() {
               גם כאשר מגיעים להסכם מאוזן, שינוי נסיבות בלתי צפוי עלול לערער
               אותו.
               <br />
-              <span className="font-brand font-bold text-black">
+              <span className="font-brand font-bold text-black text-xs">
                 NEST
               </span>{" "}
               מעניקה לכם רשת ביטחון כלכלית שמבטיחה את המשך תשלומי המזונות במקרה
@@ -92,7 +92,9 @@ export default function Home() {
             </p>
 
             <p className="text-xs text-black leading-relaxed pb-2">
-              <span className="font-brand font-bold text-black">NEST</span>{" "}
+              <span className="font-brand font-bold text-black text-xs">
+                NEST
+              </span>{" "}
               מבטיחה שתשלומי המזונות ימשיכו להגיע
               <br />
               גם אם אחד ההורים אינו מסוגל לשלם בשל מחלה קשה, נכות מתאונה ופטירה.
@@ -116,7 +118,7 @@ export default function Home() {
               <p className="text-xs text-gray-700 leading-relaxed ">
                 לא עוד חשש שמשבר יערער את ההסכם ואת הביטחון הכלכלי.
                 <br />
-                <span className="font-brand font-bold text-black">
+                <span className="font-brand font-bold text-black text-xs">
                   NEST
                 </span>{" "}
                 מעניקה בהירות ושקט, ומשאירה את טובת הילדים במרכז.
@@ -126,7 +128,7 @@ export default function Home() {
               href="/contact"
               className="mt-6 inline-block bg-[#508B58] text-white px-6 py-3 text-base hover:bg-[#3d6b43] transition-colors"
             >
-              צרו קשר
+              קבלת ייעוץ לרכישת פוליסה
             </Link>
           </div>
 

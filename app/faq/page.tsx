@@ -63,9 +63,9 @@ export default function Home() {
               שאלות ותשובות
             </h1>
 
-            <div className="divide-y divide-[#d7e8d8] text-base leading-relaxed text-black">
-              <div className="pb-2">
-                <p className="font-bold">
+            <div className="text-base leading-relaxed text-black space-y-6">
+              <div>
+                <p className="font-bold mb-2">
                   שאלה: האם הפוליסה מחליפה את ההסכם בין ההורים?
                 </p>
                 <p className="text-gray-700 text-base">
@@ -74,16 +74,16 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="">
-                <p className="font-bold">שאלה: האם התשלום הוא חד פעמי?</p>
+              <div>
+                <p className="font-bold mb-2">שאלה: האם התשלום הוא חד פעמי?</p>
                 <p className="text-gray-700 text-base">
                   תשובה: לא במרבית המקרים. הפוליסה משלמת מדי חודש את סכום
                   המזונות שנקבע למשך 10 שנים ממועד האירוע.
                 </p>
               </div>
 
-              <div className="">
-                <p className="font-bold">
+              <div>
+                <p className="font-bold mb-2">
                   שאלה: האם <span className="font-brand">NEST</span> מתאימה להורות משותפת?
                 </p>
                 <p className="text-gray-700 text-base">
@@ -92,29 +92,29 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="">
-                <p className="font-bold">שאלה: מי המוטרים?</p>
+              <div>
+                <p className="font-bold mb-2">שאלה: מי המוטרים?</p>
                 <p className="text-gray-700 text-base">תשובה: הילדים בלבד.</p>
               </div>
 
-              <div className="">
-                <p className="font-bold">שאלה: איך מפעילים את הפוליסה?</p>
+              <div>
+                <p className="font-bold mb-2">שאלה: איך מפעילים את הפוליסה?</p>
                 <p className="text-gray-700 text-base">
                   תשובה: באמצעות מסמכים רפואיים או רשמיים. התהליך פשוט וברור ללא
                   התמודדות מול ההורה השני, ובסיוע נציגי <span className="font-brand">NEST</span>.
                 </p>
               </div>
 
-              <div className="">
-                <p className="font-bold">שאלה: מה העלות?</p>
+              <div>
+                <p className="font-bold mb-2">שאלה: מה העלות?</p>
                 <p className="text-gray-700 text-base">
                   תשובה: מותאמת לגובה המזונות, גילאי הילדים וצרכי המשפחה. נבנית
                   משמעותית מהחיסכון הכלכלי של תיעוד גבוי למקרים אלו.
                 </p>
               </div>
 
-              <div className="pt-2">
-                <p className="font-bold">
+              <div>
+                <p className="font-bold mb-2">
                   שאלה: האם הורה אחד יכול לרכוש את הפוליסה לבד?
                 </p>
                 <p className="text-gray-700 text-base">

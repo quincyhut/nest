@@ -41,7 +41,7 @@ export default function Home() {
               <div className="space-y-4">
                 <div>
                   <h2 className="text-base font-bold text-[#508b58] mb-1">
-                    <span className="font-brand text-black">NEST</span> ביטוח מזונות
+                    <span className="font-brand">NEST</span> ביטוח מזונות
                   </h2>
                   <p className="text-base text-black leading-tight">
                     ההורות ממשיכה גם אחרי הפרידה.
@@ -53,7 +53,7 @@ export default function Home() {
                     עלול לערער אותו.
                     <span className="!font-bold">
                       <br />
-                      <span className="font-brand !font-bold">NEST</span>
+                      <span className="font-brand !font-bold">NEST</span>{" "}
                       מעניקה ללקוחותיכם רשת ביטחון כלכלית שמבטיחה את המשך תשלומי
                       המזונות במקרה שבו ההורה המשלם אינו מסוגל לעמוד בהתחייבותו.
                     </span>
@@ -63,7 +63,7 @@ export default function Home() {
                 <div>
                   <h2 className="text-base font-bold text-[#508b58] mb-1">
                     מהו ביטוח המזונות של{" "}
-                    <span className="font-brand text-black">NEST</span>?
+                    <span className="font-brand">NEST</span>?
                   </h2>
                   <p className="text-base text-black leading-tight">
                     <span className="font-brand">NEST</span> היא פוליסת ביטוח

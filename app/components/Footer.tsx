@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -12,12 +13,17 @@ export default function Footer() {
             height={40}
           />
         </div>
+        <div className="flex items-center gap-2 text-xs text-gray-600">
+          <Link href="/privacy" className="hover:text-[#508b58] transition-colors">מדיניות פרטיות</Link>
+          <span>|</span>
+          <span>כל הזכויות שמורות ל- <span className="font-brand">Nest</span>, 2025.</span>
+        </div>
         <div dir="rtl" className="text-right">
           <p className="text-base font-bold text-black">רוצים לדבר איתנו?</p>
           <p className="text-xs text-black">
             צוות <span className="font-brand font-bold text-black">NEST</span> זמין לשאלות, לייעוץ ולהצטרפות.
           </p>
-          <a href="mailto:info@nestinsure.co.il" className="text-xs text-[#508b58]">
+          <a href="mailto:info@nestinsure.co.il" className="text-base text-[#508b58] underline">
             info@nestinsure.co.il
           </a>
         </div>
