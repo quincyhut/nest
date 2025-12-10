@@ -28,7 +28,7 @@ export default function Home() {
       </svg>
 
       <main className="w-full flex-1 pt-4 flex justify-center px-4 md:px-0 relative overflow-x-clip">
-        <div className="flex flex-col md:flex-row gap-6 md:gap-8 max-w-[60rem] justify-end w-full md:mr-8 lg:mr-32 xl:mr-40 2xl:mr-48">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-8 max-w-[60rem] justify-center w-full">
           <div
             dir="rtl"
             className="flex-1 flex flex-col items-center justify-center text-center md:text-right py-2 px-4 md:px-6 pb-6"
@@ -173,13 +173,13 @@ export default function Home() {
             </div>
           </div>
 
-          <ClippedImage
+          {/* <ClippedImage
             clipLeft={true}
             clipType="circle"
             src="/page-7/kid.png"
             alt="Boy"
-            className="hidden lg:block w-140 h-fit absolute top-1/2 right-0 -translate-y-1/2 translate-x-[45%] xl:translate-x-[50%] 2xl:translate-x-[55%]"
-          />
+            className="hidden lg:block w-140 h-fit absolute top-1/2 right-0 -translate-y-1/2 translate-x-[60%] xl:translate-x-[65%] 2xl:translate-x-[70%]"
+          /> */}
         </div>
       </main>
       <Footer />
