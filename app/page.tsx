@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col font-sans mx-auto pt-3 md:pt-7">
+    <div className="flex min-h-screen flex-col font-sans mx-auto pt-3">
       <Header />
       <svg
         className="fixed bottom-0 right-0 h-40 w-36 md:h-62.5 md:w-56.5 -z-10"

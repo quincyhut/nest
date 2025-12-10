@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col font-sans mx-auto pt-3 md:pt-7">
+    <div className="flex min-h-screen flex-col font-sans mx-auto pt-3">
       <Header />
       <svg
         className="fixed bottom-0 right-0 h-40 w-36 md:h-62.5 md:w-56.5 -z-10"
@@ -84,7 +84,8 @@ export default function Home() {
 
               <div>
                 <p className="font-bold mb-2">
-                  שאלה: האם <span className="font-brand">NEST</span> מתאימה להורות משותפת?
+                  שאלה: האם <span className="font-brand">NEST</span> מתאימה
+                  להורות משותפת?
                 </p>
                 <p className="text-gray-700 text-base">
                   תשובה: כן. היא שומרת על האיזון הכלכלי בין ההורים ומונעת קריסה
@@ -101,7 +102,8 @@ export default function Home() {
                 <p className="font-bold mb-2">שאלה: איך מפעילים את הפוליסה?</p>
                 <p className="text-gray-700 text-base">
                   תשובה: באמצעות מסמכים רפואיים או רשמיים. התהליך פשוט וברור ללא
-                  התמודדות מול ההורה השני, ובסיוע נציגי <span className="font-brand">NEST</span>.
+                  התמודדות מול ההורה השני, ובסיוע נציגי{" "}
+                  <span className="font-brand">NEST</span>.
                 </p>
               </div>
 
