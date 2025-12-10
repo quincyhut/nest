@@ -100,12 +100,12 @@ export default function Home() {
               <li>ביטחון כלכלי אמיתי לילדים.</li>
               <li>שקט נפשי בתקופה של שינוי.</li>
               <li>הוגנות ושמירה על שותפות הורית.</li>
-              <li>רציפות ואמון בין ההורים לאורך זמן./li>
+              <li>רציפות ואמון בין ההורים לאורך זמן.</li>
             </ul>
 
             <div className="bg-[#f4f5f2] rounded-md px max-w-100 text-center">
               <h3 className="text-[#7fa687] font-bold text-xs mb-1">
-                לא עוד ויכוחים על "מה יקרה אם?"
+                לא עוד ויכוחים על &quot;מה יקרה אם?&quot;
               </h3>
               <p className="text-xs text-gray-700 leading-relaxed ">
                 לא עוד חשש שמשבר יערער את ההסכם ואת הביטחון הכלכלי.
