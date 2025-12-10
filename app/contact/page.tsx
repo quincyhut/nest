@@ -359,8 +359,9 @@ export default function ContactPage() {
                     className="mt-1 w-4 h-4 accent-[#508B58]"
                   />
                   <span className="text-xs text-black leading-tight">
-                    אני מאשר/ת ל-NEST ליצור איתי קשר ולשלוח אליי מידע מקצועי
-                    ועדכונים לגבי שיתוף פעולה.
+                    אני מאשר/ת את תנאי מדיניות הפרטיות של אתר NEST, ואני מאשר/ת
+                    ל-NEST ליצור איתי קשר ולשלוח לי פרטים לגבי השירות ו/או
+                    המוצרים אשר היא מציעה באתר.
                   </span>
                 </label>
 
