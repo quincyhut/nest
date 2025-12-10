@@ -56,7 +56,7 @@ export default function Home() {
         <div className="flex flex-col-reverse md:flex-row gap-6 md:gap-8 max-w-[75rem] justify-end w-full">
           <div
             dir="rtl"
-            className="flex-1 inline justify-center items-center flex-col pt-6 md:pt-15 max-w-full md:max-w-85 text-center md:text-right"
+            className="flex-1 inline justify-center items-center flex-col pt-6 md:pt-15 max-w-full md:max-w-85 text-center md:text-right md:max-h-[calc(100vh-8rem)] md:overflow-y-auto"
           >
             <h1 className="text-2xl font-bold text-[#508b58]">אודות</h1>
             <p className="mt-4 text-base text-black ">
@@ -73,10 +73,10 @@ export default function Home() {
               כלכלית ומשפחתית גם ברגעים של חוסר ודאות.
               <br />
               אנו פועלים בשיתוף מומחים בתחום המשפט, הביטוח והמשפחה ומחויבים
-              לשקיפות, מקצועיות ורגישות אנושית. <br />
-              <span className="font-brand">NEST</span> פועלת בשיתוף פעולה מקצועי
-              עם חברת הביטוח מגדל, אחת החברות המובילות והמוערכות בישראל, כדי
-              להבטיח יציבות לאורך זמן, אמינות מלאה ותהליך הפעלה פשוט וברור.
+              לשקיפות, מקצועיות ורגישות. <br />
+              <span className="font-brand">NEST</span> פועלת בשיתוף פעולה עם
+              חברת הביטוח מגדל, מהחברות המובילות והמוערכות בישראל, כדי להבטיח
+              יציבות לאורך זמן, שירות מעולה ותהליך הפעלה פשוט וברור.{" "}
             </p>
           </div>
           <ClippedImage
