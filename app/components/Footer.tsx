@@ -14,7 +14,7 @@ export default function Footer() {
           />
         </div>
         <div className="flex items-center gap-2 text-xs text-gray-600">
-          <span>2025, <span className="font-brand">Nest</span> -כל הזכויות שמורות ל</span>
+          <span><span className="font-brand">2025</span>, <span className="font-brand">Nest</span> -כל הזכויות שמורות ל</span>
           <span>|</span>
           <Link href="/privacy" className="hover:text-[#508b58] transition-colors">מדיניות פרטיות</Link>
         </div>
@@ -23,7 +23,7 @@ export default function Footer() {
           <p className="text-xs text-black">
             צוות <span className="font-brand font-bold text-black">NEST</span> זמין לשאלות, לייעוץ ולהצטרפות.
           </p>
-          <a href="mailto:info@nestinsure.co.il" className="text-base text-[#508b58] underline">
+          <a href="mailto:info@nestinsure.co.il" className="font-brand text-base text-[#508b58] underline">
             info@nestinsure.co.il
           </a>
         </div>

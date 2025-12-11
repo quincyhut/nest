@@ -64,40 +64,34 @@ export default function Home() {
               הורים במשפחה בשינוי
             </h1>
 
-            <h2 className="text-xs !font-bold text-black ">
+            <h2 className="text-sm !font-bold text-black ">
               הורות ממשיכה גם אחרי פרידה והילדים זקוקים ליציבות
             </h2>
 
             <p className="text-xs text-black !font-bold leading-relaxed ">
               <span className="font-brand !font-bold text-black">NEST</span>{" "}
-              מבטחת מזונות.
+              ביטוח מזונות.
             </p>
 
             <p className="text-xs text-black leading-relaxed ">
-              ההסכם צריך לייצר ודאות, יציבות, ומנגנוני גיבוי ברורים לאורך זמן.
+              ההסכם צריך לייצר ודאות, יציבות, ומנגנוני אכיפה ברורים לאורך זמן.
               <br />
-              חלוקת ההוצאות בגידול הילדים היא אחד המרכיבים המרכזיים למחלוקות בין
+              חלוקת הוצאות גידול הילדים היא אחת הסיבות המרכזיות למחלוקות בין
               הורים נפרדים.
             </p>
 
             <p className="text-xs text-black leading-relaxed  pb-2">
-              גם כאשר מגיעים להסכם מאוזן, שינוי נסיבות בלתי צפוי עלול לערער
-              אותו.
+              גם כאשר מגיעים להסכם גירושין מאוזן, שינוי נסיבות בלתי צפוי עלול
+              לערער אותו.
               <br />
               <span className="font-brand font-bold text-black text-xs">
                 NEST
               </span>{" "}
-              מעניקה לכם רשת ביטחון כלכלית שמבטיחה את המשך תשלומי המזונות במקרה
-              שבו ההורה המשלם אינו מסוגל לעמוד בהתחייבותו.
-            </p>
-
-            <p className="text-xs text-black leading-relaxed pb-2">
-              <span className="font-brand font-bold text-black text-xs">
-                NEST
-              </span>{" "}
-              מבטיחה שתשלומי המזונות ימשיכו להגיע
+              מעניקה לכם רשת ביטחון כלכלית שמבטיחה מקור הכספי להמשך תשלומי
+              המזונות
               <br />
-              גם אם אחד ההורים אינו מסוגל לשלם בשל מחלה קשה, נכות מתאונה ופטירה.
+              במקרה שבו ההורה המשלם אינו מסוגל לעמוד בהתחייבותו בשל מחלה קשה,
+              נכות מתאונה או פטירה.
             </p>
 
             <h2 className="text-base font-bold text-[#508b58] ">
@@ -107,13 +101,13 @@ export default function Home() {
             <ul className="list-disc list-inside text-xs text-black space-y-1 mb-12">
               <li>ביטחון כלכלי אמיתי לילדים.</li>
               <li>שקט נפשי בתקופה של שינוי.</li>
-              <li>תגמול כספי חד וברור בשקיפות הורית.</li>
-              <li>יציבות אמיתית בין ההורים לאורך זמן.</li>
+              <li>הוגנות ושמירה על שותפות הורית.</li>
+              <li>רציפות ואמון בין ההורים לאורך זמן.</li>
             </ul>
 
             <div className="bg-[#f4f5f2] rounded-md px max-w-100 text-center">
               <h3 className="text-[#7fa687] font-bold text-xs mb-1">
-                לא עוד ויכוחים על "מה יקרה אם?"
+                לא עוד ויכוחים על &quot;מה יקרה אם?&quot;
               </h3>
               <p className="text-xs text-gray-700 leading-relaxed ">
                 לא עוד חשש שמשבר יערער את ההסכם ואת הביטחון הכלכלי.
@@ -121,17 +115,16 @@ export default function Home() {
                 <span className="font-brand font-bold text-black text-xs">
                   NEST
                 </span>{" "}
-                מעניקה בהירות ושקט, ומשאירה את טובת הילדים במרכז.
+                מציעה בהירות ושקט, ומשאירה את טובת הילדים במרכז.
               </p>
             </div>
             <Link
               href="/contact"
               className="mt-6 inline-block bg-[#508B58] text-white px-6 py-3 text-base hover:bg-[#3d6b43] transition-colors"
             >
-              קבלת ייעוץ לרכישת פוליסה
+              ליעוץ לקבלת הצעה לביטוח מזונות
             </Link>
           </div>
-
           <ClippedImage
             src="/page-4/dad.png"
             alt="Boy"

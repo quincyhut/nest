@@ -28,7 +28,7 @@ export default function Home() {
       </svg>
 
       <main className="w-full flex-1 pt-4 flex justify-center px-4 md:px-0 relative overflow-x-clip">
-        <div className="flex flex-col md:flex-row gap-6 md:gap-8 max-w-[60rem] justify-end w-full md:mr-8 lg:mr-16">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-8 max-w-[60rem] justify-center w-full">
           <div
             dir="rtl"
             className="flex-1 flex flex-col items-center justify-center text-center md:text-right py-2 px-4 md:px-6 pb-6"
@@ -45,17 +45,21 @@ export default function Home() {
                   </h2>
                   <p className="text-base text-black leading-tight">
                     ההורות ממשיכה גם אחרי הפרידה.
-                    <br /> ההסכם צריך לייצר ודאות, יציבות, ומנגנוני אכיפה ברורים
-                    לאורך זמן.
-                    <br /> חלוקת הוצאות גידול הילדים היא אחד המרכיבים המרכזיים
-                    למחלוקות בין הורים נפרדים.
-                    <br /> גם כאשר מגיעים להסכם מאוזן, שינוי נסיבות בלתי צפוי
-                    עלול לערער אותו.
+                    <br />
+                    הסכם הגירושין צריך לייצר ודאות, יציבות, ומנגנוני אכיפה
+                    ברורים לאורך זמן.
+                    <br />
+                    חלוקת הוצאות גידול הילדים היא אחת הסיבות המרכזיות למחלוקות
+                    בין הורים נפרדים.
+                    <br />
+                    גם כאשר מגיעים להסכם מאוזן, שינוי נסיבות בלתי צפוי עלול
+                    לערער אותו.
                     <span className="!font-bold">
                       <br />
                       <span className="font-brand !font-bold">NEST</span> מעניקה
-                      ללקוחותיכם רשת ביטחון כלכלית שמבטיחה את המשך תשלומי
-                      המזונות במקרה שבו ההורה המשלם אינו מסוגל לעמוד בהתחייבותו.
+                      ללקוחותיכם כיסוי שנועד להוות מקור להמשך תשלומי מזונות
+                      במקרה שבו ההורה המשלם אינו מסוגל לעמוד בהתחייבותו עקב מחלה
+                      קשה, נכות מתאונה ופטירה, כמפורט בתנאי הפוליסות.
                     </span>
                   </p>
                 </div>
@@ -67,14 +71,12 @@ export default function Home() {
                   </h2>
                   <p className="text-base text-black leading-tight">
                     <span className="font-brand">NEST</span> היא פוליסת ביטוח
-                    פיננסית חדשנית.
+                    חדשנית.
                     <br />
                     היא מבטיחה את מימוש התחייבות המזונות גם במצב של מחלה קשה,
                     נכות מתאונה ופטירה.
                     <br />
                     הילדים הם המוטבים.
-                    <br />
-                    ההסכם נשמר והוודאות נשמרת.
                     <br />
                     זהו מנגנון שמגן על הילדים, ההורים ועל ההסכם שנוסח במאמץ רב.
                   </p>
@@ -93,7 +95,7 @@ export default function Home() {
                     </li>
                     <li className="list-none">
                       <span className="font-brand">NEST</span> מזמינה את עורכי
-                      הדין להציע מנגנון שמונע מחלוקות עתידיות, מחזק את ההסכם
+                      הדין לאמץ מנגנון שמפחית מחלוקות עתידיות, מחזק את ההסכם
                       ומשפר את איכות הייצוג, כאשר ההגנה על טובת הילדים משרתת את
                       שני הצדדים.
                     </li>
@@ -111,18 +113,16 @@ export default function Home() {
                     NEST מעניקה לשני ההורים את מה שחשוב באמת לילדים: יציבות,
                     ודאות ושקט נפשי.
                     <br />
-                    הפוליסה מבטיחה שהמזונות ימשיכו להיות משולמים גם כשהחיים
-                    משתנים לפתע, ומונעת מתחים, חששות ועומס מיותר.
+                    הכיסוי הביטוחי נועד להבטיח שיהיה מקור לתשלום מזונות גם
+                    כשהחיים משתנים לפתע, ומונעת מתחים, חששות ועומס מיותר.
                     <br />
-                    זהו מנגנון הוגן ושקוף שמגן על שני ההורים במידה שווה, מחזק את
-                    ההסכם ומבטיח שאף אחד לא נותר לבד עם הנטל הכלכלי.
+                    זהו מנגנון הוגן ושקוף שמגן על שני ההורים ומחזק את ההסכם.
                     <br />
                     במקרים של הורות או משמורת משותפת, שבהם שני ההורים חולקים את
                     ההוצאות באופן מאוזן, NEST הופכת משמעותית במיוחד.
                     <br />
-                    הפוליסה שומרת על האיזון, מונעת קריסה כלכלית של אחד הצדדים
-                    במקרה של אירוע פתאומי, ומבטיחה שהילדים ימשיכו לקבל את התמיכה
-                    שנקבעה עבורם.
+                    הפוליסה שומרת על האיזון, ומבטיחה שהילדים ימשיכו לקבל את
+                    התמיכה שנקבעה עבורם.
                     <br />
                     <span className="!font-bold">
                       <span className="font-brand !font-bold">NEST</span> מאפשרת
@@ -138,7 +138,9 @@ export default function Home() {
                   </h2>
                   <ul className="list-disc list-inside text-base text-black leading-tight space-y-0.5">
                     <li>כלי אסטרטגי למו״מ המפחית את עוצמת הקונפליקט.</li>
-                    <li>חיזוק משפטי של ההסכם באמצעות מנגנון חיצוני יציב.</li>
+                    <li>
+                      חיזוק משפטי של הסכם הגירושין באמצעות מנגנון חיצוני יציב.
+                    </li>
                     <li>יתרון תדמיתי כמי שמובילים חשיבה חדשנית בתחום.</li>
                     <li>
                       חיסכון בזמן ובהתמודדות עם תיקי המשך ומחלוקות עתידיות.
@@ -165,19 +167,19 @@ export default function Home() {
                   href="/contact"
                   className="mt-4 inline-block bg-[#508B58] text-white px-10 py-1.5 text-base hover:bg-[#3d6b43] transition-colors"
                 >
-                  לקבלת הצעה לביטוח מזונות
+                  צרו קשר
                 </Link>
               </div>
             </div>
           </div>
 
-          <ClippedImage
+          {/* <ClippedImage
             clipLeft={true}
             clipType="circle"
             src="/page-7/kid.png"
             alt="Boy"
-            className="hidden lg:block w-140 h-fit absolute top-1/2 right-0 -translate-y-1/2 translate-x-[55%] xl:translate-x-[60%] 2xl:translate-x-[65%]"
-          />
+            className="hidden lg:block w-140 h-fit absolute top-1/2 right-0 -translate-y-1/2 translate-x-[60%] xl:translate-x-[65%] 2xl:translate-x-[70%]"
+          /> */}
         </div>
       </main>
       <Footer />
