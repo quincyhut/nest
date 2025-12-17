@@ -86,6 +86,12 @@ export default defineType({
       initialValue: 'right',
     }),
     defineField({
+      name: 'textContainerPadding',
+      title: 'Text Container Padding (Tailwind class)',
+      type: 'string',
+      description: 'Top padding for text container, e.g., "pt-6 md:pt-30" for homepage',
+    }),
+    defineField({
       name: 'maxTextWidth',
       title: 'Max Text Width (Tailwind class)',
       type: 'string',

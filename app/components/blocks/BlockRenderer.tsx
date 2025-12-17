@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import PortableText from '../PortableText'
 import IconGrid from './IconGrid'
+import ContactForm from './ContactForm'
 import type { PortableTextBlock } from '@portabletext/types'
 
 // Type definitions for blocks
@@ -124,6 +125,15 @@ interface PrivacySectionBlock {
   content?: PortableTextBlock[]
 }
 
+interface ContactFormBlock {
+  _type: 'contactFormBlock'
+  _key: string
+  heading?: string
+  introText?: PortableTextBlock[]
+  successMessage?: string
+  errorMessage?: string
+}
+
 type ContentBlock =
   | HeroBlock
   | TextSectionBlock
@@ -135,6 +145,7 @@ type ContentBlock =
   | TwoColumnBlock
   | DisclaimerBlock
   | PrivacySectionBlock
+  | ContactFormBlock
   | (CTAButton & { _key: string })
 
 interface BlockRendererProps {
@@ -162,19 +173,19 @@ function CTAButtonComponent({ button }: { button?: CTAButton }) {
 
 function RenderHeroBlock({ block }: { block: HeroBlock }) {
   return (
-    <div className="space-y-4">
+    <>
       {block.heading && (
         <h1 className="text-2xl font-bold text-[#508b58]">
-          <PortableText value={block.heading} />
+          <PortableText value={block.heading} inline />
         </h1>
       )}
       {block.subheading && (
-        <div className="text-base text-black">
-          <PortableText value={block.subheading} />
-        </div>
+        <p className="mt-4 text-base text-black">
+          <PortableText value={block.subheading} inline />
+        </p>
       )}
       <CTAButtonComponent button={block.cta} />
-    </div>
+    </>
   )
 }
 
@@ -399,6 +410,8 @@ export default function BlockRenderer({ blocks }: BlockRendererProps) {
             return <RenderDisclaimer key={key} block={block} />
           case 'privacySectionBlock':
             return <RenderPrivacySection key={key} block={block} />
+          case 'contactFormBlock':
+            return <ContactForm key={key} block={block} />
           case 'ctaButton':
             return <CTAButtonComponent key={key} button={block} />
           default:

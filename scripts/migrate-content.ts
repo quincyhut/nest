@@ -120,6 +120,7 @@ const pages = [
         imagePosition: 'right',
         maxTextWidth: 'md:max-w-85',
         textAlignment: 'center',
+        textContainerPadding: 'pt-6 md:pt-30',
         cta: {
           _type: 'ctaButton',
           text: 'לקבלת הצעה לביטוח מזונות',
@@ -174,6 +175,7 @@ const pages = [
         imagePosition: 'right',
         maxTextWidth: 'md:max-w-120',
         textAlignment: 'right',
+        textContainerPadding: 'pt-6 md:pt-15',
       },
     ],
   },
@@ -739,10 +741,37 @@ const pages = [
   },
 ]
 
+// Navigation data
+const navigation = {
+  _type: 'navigation',
+  title: 'Main Navigation',
+  menuItems: [
+    { _key: generateKey(), label: 'משרדי עורכי דין ומגשרים', href: '/partners', isHighlighted: true, order: 1 },
+    { _key: generateKey(), label: 'בית', href: '/', isHighlighted: false, order: 2 },
+    { _key: generateKey(), label: 'אודות', href: '/about', isHighlighted: false, order: 3 },
+    { _key: generateKey(), label: 'כיסוי ביטוחי', href: '/insurance', isHighlighted: false, order: 4 },
+    { _key: generateKey(), label: 'שאלות ותשובות', href: '/faq', isHighlighted: false, order: 5 },
+    { _key: generateKey(), label: 'מידע והצטרפות להורים', href: '/parents', isHighlighted: false, order: 6 },
+    { _key: generateKey(), label: 'צרו קשר', href: '/contact', isHighlighted: false, order: 7 },
+  ],
+  mobileContactTitle: 'רוצים לדבר איתנו?',
+  mobileContactSubtext: 'צוות NEST זמין לשאלות, לייעוץ ולהצטרפות.',
+}
+
 async function migrate() {
   console.log('Starting migration...')
   console.log(`Project: ${projectId}, Dataset: ${dataset}`)
 
+  // Create navigation
+  console.log('Creating navigation...')
+  try {
+    const navResult = await client.create(navigation)
+    console.log(`✓ Created: Navigation (${navResult._id})`)
+  } catch (error) {
+    console.error('✗ Failed to create navigation:', error)
+  }
+
+  // Create pages
   for (const page of pages) {
     console.log(`Creating page: ${page.title}...`)
 

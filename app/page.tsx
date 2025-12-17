@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 import { client } from '@/lib/sanity.client'
-import { homepageQuery } from '@/lib/sanity.queries'
+import { homepageQuery, navigationQuery } from '@/lib/sanity.queries'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import ClippedImage from './components/ClippedImage'
@@ -24,7 +24,10 @@ export async function generateMetadata() {
 }
 
 export default async function HomePage() {
-  const page = await client.fetch(homepageQuery)
+  const [page, navigation] = await Promise.all([
+    client.fetch(homepageQuery),
+    client.fetch(navigationQuery),
+  ])
 
   if (!page) {
     notFound()
@@ -45,7 +48,7 @@ export default async function HomePage() {
 
   return (
     <div className="flex min-h-screen flex-col font-sans mx-auto pt-3">
-      <Header />
+      <Header navigation={navigation} />
 
       <BackgroundPatterns patterns={page.backgroundPatterns} />
 
@@ -53,9 +56,9 @@ export default async function HomePage() {
         <div className="flex flex-col-reverse md:flex-row gap-6 md:gap-8 max-w-[75rem] justify-end w-full">
           <div
             dir="rtl"
-            className={`flex-1 inline justify-center items-center flex-col pt-6 md:pt-30 max-w-full ${
-              heroBlock?.maxTextWidth || 'md:max-w-85'
-            } text-center pb-6`}
+            className={`flex-1 inline justify-center items-center flex-col max-w-full ${
+              heroBlock?.textContainerPadding || 'pt-6 md:pt-30'
+            } ${heroBlock?.maxTextWidth || 'md:max-w-85'} text-center pb-6`}
           >
             <BlockRenderer blocks={page.contentBlocks} />
           </div>

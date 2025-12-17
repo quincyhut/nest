@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 import { client, isSanityConfigured } from '@/lib/sanity.client'
-import { pageBySlugQuery, allPageSlugsQuery } from '@/lib/sanity.queries'
+import { pageBySlugQuery, allPageSlugsQuery, navigationQuery } from '@/lib/sanity.queries'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import ClippedImage from '../components/ClippedImage'
@@ -39,7 +39,10 @@ interface PageProps {
 
 export default async function DynamicPage({ params }: PageProps) {
   const { slug } = await params
-  const page = await client.fetch(pageBySlugQuery, { slug })
+  const [page, navigation] = await Promise.all([
+    client.fetch(pageBySlugQuery, { slug }),
+    client.fetch(navigationQuery),
+  ])
 
   if (!page) {
     notFound()
@@ -64,7 +67,7 @@ export default async function DynamicPage({ params }: PageProps) {
 
   return (
     <div className="flex min-h-screen flex-col font-sans mx-auto pt-3">
-      <Header />
+      <Header navigation={navigation} />
 
       <BackgroundPatterns patterns={page.backgroundPatterns} />
 
@@ -90,8 +93,10 @@ export default async function DynamicPage({ params }: PageProps) {
             <div
               dir="rtl"
               className={`flex-1 inline justify-center items-center flex-col max-w-full ${
-                heroBlock?.maxTextWidth || 'md:max-w-150'
-              } text-center md:text-right pb-6`}
+                heroBlock?.textContainerPadding || ''
+              } ${heroBlock?.maxTextWidth || 'md:max-w-150'} ${
+                heroBlock?.textAlignment === 'center' ? 'text-center' : 'text-center md:text-right'
+              } pb-6`}
             >
               <BlockRenderer blocks={page.contentBlocks} />
             </div>
