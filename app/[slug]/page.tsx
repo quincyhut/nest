@@ -1,20 +1,14 @@
 import { notFound } from 'next/navigation'
-import { client, isSanityConfigured } from '@/lib/sanity.client'
-import { pageBySlugQuery, allPageSlugsQuery, navigationQuery } from '@/lib/sanity.queries'
+import { client } from '@/lib/sanity.client'
+import { pageBySlugQuery, navigationQuery } from '@/lib/sanity.queries'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import ClippedImage from '../components/ClippedImage'
 import BackgroundPatterns from '../components/blocks/BackgroundPatterns'
 import BlockRenderer from '../components/blocks/BlockRenderer'
 
-// Generate static paths for all pages
-export async function generateStaticParams() {
-  if (!isSanityConfigured) {
-    return []
-  }
-  const pages = await client.fetch<{ slug: string }[]>(allPageSlugsQuery)
-  return pages?.map((page) => ({ slug: page.slug })) || []
-}
+// Force dynamic rendering to get fresh content from Sanity
+export const dynamic = 'force-dynamic'
 
 // Generate metadata for each page
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {

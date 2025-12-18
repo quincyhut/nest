@@ -8,12 +8,13 @@ const apiVersion = process.env.NEXT_PUBLIC_SANITY_API_VERSION || '2024-01-01'
 export const isSanityConfigured = Boolean(projectId)
 
 // Create client only if configured, otherwise create a mock client
+// Using useCdn: false to always get fresh content
 export const client: SanityClient = projectId
   ? createClient({
       projectId,
       dataset,
       apiVersion,
-      useCdn: process.env.NODE_ENV === 'production',
+      useCdn: false,
     })
   : ({
       fetch: async () => null,

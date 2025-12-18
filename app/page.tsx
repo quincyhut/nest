@@ -7,6 +7,9 @@ import ClippedImage from './components/ClippedImage'
 import BackgroundPatterns from './components/blocks/BackgroundPatterns'
 import BlockRenderer from './components/blocks/BlockRenderer'
 
+// Force dynamic rendering to get fresh content from Sanity
+export const dynamic = 'force-dynamic'
+
 // Generate metadata for homepage
 export async function generateMetadata() {
   const page = await client.fetch(homepageQuery)
