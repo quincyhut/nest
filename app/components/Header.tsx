@@ -27,11 +27,13 @@ export default function Header({ navigation }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
 
-  // Sort menu items by order
-  const menuItems = navigation?.menuItems?.sort((a, b) => (a.order || 0) - (b.order || 0)) || []
+  // Filter out incomplete menu items (must have both label and href) and sort by order
+  const menuItems = (navigation?.menuItems || [])
+    .filter((item) => item.label && item.href)
+    .sort((a, b) => (a.order || 0) - (b.order || 0))
 
   // Separate highlighted (partners) item from regular items
-  const highlightedItem = menuItems.find((item) => item.isHighlighted)
+  const highlightedItem = menuItems.find((item) => item.isHighlighted && item.label && item.href)
   const regularItems = menuItems.filter((item) => !item.isHighlighted)
 
   // For desktop: reverse order (RTL display)
