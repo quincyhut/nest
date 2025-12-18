@@ -1,6 +1,4 @@
-import type { Config, Context } from "@netlify/edge-functions";
-
-export default async (request: Request, context: Context) => {
+export default async (request: Request) => {
   // Only allow POST requests
   if (request.method !== "POST") {
     return new Response(JSON.stringify({ message: "Method not allowed" }), {
@@ -10,7 +8,7 @@ export default async (request: Request, context: Context) => {
   }
 
   try {
-    const REVALIDATION_SECRET = Netlify.env.get("SANITY_REVALIDATE_SECRET");
+    const REVALIDATION_SECRET = process.env.SANITY_REVALIDATE_SECRET;
 
     // Verify the secret if configured
     if (REVALIDATION_SECRET) {
@@ -27,7 +25,7 @@ export default async (request: Request, context: Context) => {
 
     // Parse the webhook payload from Sanity
     const body = await request.json();
-    const { _type, slug } = body;
+    const { _type, slug } = body as { _type?: string; slug?: { current?: string } };
 
     console.log(`Revalidation triggered for type: ${_type}, slug: ${slug?.current}`);
 
@@ -56,6 +54,6 @@ export default async (request: Request, context: Context) => {
   }
 };
 
-export const config: Config = {
+export const config = {
   path: "/api/revalidate",
 };
