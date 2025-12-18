@@ -2,11 +2,13 @@
   command = "npm run build"
   publish = ".next"
 
-[functions]
-  directory = "netlify/functions"
-
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+# Edge Functions
+[[edge_functions]]
+  path = "/api/revalidate"
+  function = "revalidate"
 
 # Enable Next.js Image Optimization
 [images]
