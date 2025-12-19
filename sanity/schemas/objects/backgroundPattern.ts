@@ -29,18 +29,20 @@ export default defineType({
       type: 'string',
       options: {
         list: [
-          { title: 'Light Green (#EDF2EC)', value: '#EDF2EC' },
-          { title: 'Primary Green (#508B58)', value: '#508B58' },
+          { title: 'Light Grey-Green (#EDF2EC)', value: '#EDF2EC' },
+          { title: 'Green 33% opacity (#508B58)', value: '#508B58' },
         ],
       },
       initialValue: '#EDF2EC',
+      description: 'Light Grey-Green is solid. Green appears lighter due to 33% opacity.',
     }),
     defineField({
       name: 'opacity',
-      title: 'Opacity (0-1)',
+      title: 'Opacity (%)',
       type: 'number',
-      validation: (Rule) => Rule.min(0).max(1),
-      initialValue: 1,
+      validation: (Rule) => Rule.min(0).max(100),
+      initialValue: 100,
+      description: 'Visibility: 100 = fully visible, 0 = invisible. Green circles typically use 33%.',
     }),
   ],
   preview: {

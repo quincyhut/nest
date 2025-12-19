@@ -19,7 +19,7 @@ const patternPaths = {
 }
 
 const patternClasses = {
-  topLeft: "fixed top-0 left-0 h-80 w-100 md:h-175 md:w-250 -z-10",
+  topLeft: "fixed top-0 left-0 h-80 w-100 md:h-168 md:w-235 -z-10",
   topRight: "fixed top-0 right-0 h-32 w-44 md:h-60 md:w-88 -z-10",
   bottomRight: "fixed bottom-0 right-0 h-40 w-36 md:h-62.5 md:w-56.5 -z-10",
 }
@@ -32,9 +32,19 @@ const patternViewBoxes = {
 
 export default function BackgroundPatterns({ patterns }: BackgroundPatternsProps) {
   if (!patterns || patterns.length === 0) {
-    // Default patterns if none specified
+    // Default patterns matching original design
     return (
       <>
+        {/* Bottom right - Green at 33% opacity */}
+        <svg
+          className={patternClasses.bottomRight}
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox={patternViewBoxes.bottomRight}
+          fill="none"
+        >
+          <path d={patternPaths.bottomRight} fill="#508B58" opacity={0.33} />
+        </svg>
+        {/* Top left - Light grey-green solid */}
         <svg
           className={patternClasses.topLeft}
           xmlns="http://www.w3.org/2000/svg"
@@ -42,6 +52,15 @@ export default function BackgroundPatterns({ patterns }: BackgroundPatternsProps
           fill="none"
         >
           <path d={patternPaths.topLeft} fill="#EDF2EC" />
+        </svg>
+        {/* Top right - Light grey-green solid */}
+        <svg
+          className={patternClasses.topRight}
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox={patternViewBoxes.topRight}
+          fill="none"
+        >
+          <path d={patternPaths.topRight} fill="#EDF2EC" />
         </svg>
       </>
     )
@@ -51,6 +70,13 @@ export default function BackgroundPatterns({ patterns }: BackgroundPatternsProps
     <>
       {patterns.map((pattern, index) => {
         if (!pattern.enabled) return null
+
+        // Convert percentage (0-100) to decimal (0-1)
+        // Handle both old format (0-1) and new format (0-100)
+        let opacityDecimal = pattern.opacity ?? 100
+        if (opacityDecimal > 1) {
+          opacityDecimal = opacityDecimal / 100
+        }
 
         return (
           <svg
@@ -63,7 +89,7 @@ export default function BackgroundPatterns({ patterns }: BackgroundPatternsProps
             <path
               d={patternPaths[pattern.position]}
               fill={pattern.color}
-              opacity={pattern.opacity}
+              opacity={opacityDecimal}
             />
           </svg>
         )
