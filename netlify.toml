@@ -2,8 +2,9 @@
   command = "npm run build"
   publish = ".next"
 
-[functions]
-  node_bundler = "esbuild"
-
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+# Enable Next.js Image Optimization
+[images]
+  remote_images = ["https://cdn.sanity.io/.*"]

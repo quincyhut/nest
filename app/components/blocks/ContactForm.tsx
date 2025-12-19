@@ -1,0 +1,344 @@
+'use client'
+
+import { useState } from 'react'
+import PortableText from '../PortableText'
+import type { PortableTextBlock } from '@portabletext/types'
+
+interface ContactFormBlockProps {
+  block: {
+    heading?: string
+    introText?: PortableTextBlock[]
+    successMessage?: string
+    errorMessage?: string
+  }
+}
+
+export default function ContactForm({ block }: ContactFormBlockProps) {
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    phone: '',
+    userType: '',
+    message: '',
+    officeName: '',
+    mainField: '',
+    mainArea: '',
+    consent: false,
+  })
+
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+
+  const showProfessionalFields = formData.userType === 'lawyer' || formData.userType === 'mediator'
+
+  const isFormValid =
+    formData.fullName.trim() !== '' &&
+    formData.email.trim() !== '' &&
+    formData.phone.trim() !== '' &&
+    formData.userType !== '' &&
+    formData.consent === true
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    const { name, value, type } = e.target
+    const checked = (e.target as HTMLInputElement).checked
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === 'checkbox' ? checked : value,
+    }))
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!isFormValid) return
+
+    setIsSubmitting(true)
+    setSubmitStatus('idle')
+
+    try {
+      const response = await fetch('https://nest-api.prod.nestinsure.co.il/api/v1/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          mainField:
+            formData.mainField === 'family-law'
+              ? 'דיני משפחה וגירושין'
+              : formData.mainField === 'family-mediation'
+                ? 'גישור משפחתי'
+                : formData.mainField === 'other'
+                  ? 'אחר'
+                  : formData.mainField,
+          mainArea:
+            formData.mainArea === 'tel-aviv'
+              ? 'תל אביב והמרכז'
+              : formData.mainArea === 'sharon'
+                ? 'השרון'
+                : formData.mainArea === 'jerusalem'
+                  ? 'ירושלים'
+                  : formData.mainArea === 'haifa'
+                    ? 'חיפה והצפון'
+                    : formData.mainArea === 'south'
+                      ? 'דרום'
+                      : formData.mainArea === 'nationwide'
+                        ? 'כלל־ארצי'
+                        : formData.mainArea,
+          targetEmail:
+            formData.userType === 'lawyer' || formData.userType === 'mediator'
+              ? 'partners'
+              : 'info',
+        }),
+      })
+
+      if (response.ok) {
+        setSubmitStatus('success')
+        setFormData({
+          fullName: '',
+          email: '',
+          phone: '',
+          userType: '',
+          message: '',
+          officeName: '',
+          mainField: '',
+          mainArea: '',
+          consent: false,
+        })
+      } else {
+        setSubmitStatus('error')
+      }
+    } catch {
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  return (
+    <>
+      {block.heading && <h1 className="text-2xl font-bold text-[#508b58] mb-2">{block.heading}</h1>}
+
+      {block.introText && (
+        <div className="text-base text-black mb-6">
+          <PortableText value={block.introText} inline />
+          <br />
+          פניות מעורכי דין/מגשרים:{' '}
+          <a href="mailto:partners@nestinsure.co.il" className="text-[#508b58] underline">
+            partners@nestinsure.co.il
+          </a>
+          <br />
+          פניות כלליות:{' '}
+          <a href="mailto:info@nestinsure.co.il" className="text-[#508b58] underline">
+            info@nestinsure.co.il
+          </a>
+        </div>
+      )}
+
+      {/* Success Popup Modal */}
+      {submitStatus === 'success' && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+          <div dir="rtl" className="bg-white p-6 max-w-sm mx-4 relative text-center shadow-lg">
+            <button
+              onClick={() => setSubmitStatus('idle')}
+              className="absolute top-2 left-2 text-gray-500 hover:text-gray-700 text-xl font-bold"
+              aria-label="סגור"
+            >
+              ✕
+            </button>
+            <p className="text-base text-black mt-4">
+              {block.successMessage || 'הפרטים נשלחו בהצלחה, ניצור עמכם קשר בהקדם.'}
+              <br />
+              תודה, צוות <span className="font-brand font-bold">NEST</span>.
+            </p>
+          </div>
+        </div>
+      )}
+
+      {submitStatus === 'error' && (
+        <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 mb-4 text-base">
+          {block.errorMessage ||
+            'אירעה שגיאה בשליחת ההודעה. אנא נסו שוב או צרו קשר ישירות במייל.'}
+        </div>
+      )}
+
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+        {/* Full Name */}
+        <div className="flex flex-col gap-1">
+          <label htmlFor="fullName" className="text-base text-black">
+            שם מלא <span className="text-red-500">*</span>
+          </label>
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            value={formData.fullName}
+            onChange={handleInputChange}
+            required
+            className="border border-gray-300 px-4 py-2 text-base focus:outline-none focus:border-[#508B58]"
+          />
+        </div>
+
+        {/* Email */}
+        <div className="flex flex-col gap-1">
+          <label htmlFor="email" className="text-base text-black">
+            דוא&quot;ל <span className="text-red-500">*</span>
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
+            required
+            className="border border-gray-300 px-4 py-2 text-base focus:outline-none focus:border-[#508B58]"
+          />
+        </div>
+
+        {/* Phone */}
+        <div className="flex flex-col gap-1">
+          <label htmlFor="phone" className="text-base text-black">
+            טלפון <span className="text-red-500">*</span>
+          </label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            value={formData.phone}
+            onChange={handleInputChange}
+            required
+            className="border border-gray-300 px-4 py-2 text-base focus:outline-none focus:border-[#508B58]"
+          />
+        </div>
+
+        {/* User Type */}
+        <div className="flex flex-col gap-1">
+          <label htmlFor="userType" className="text-base text-black">
+            בחרו <span className="text-red-500">*</span>
+          </label>
+          <select
+            id="userType"
+            name="userType"
+            value={formData.userType}
+            onChange={handleInputChange}
+            required
+            className="border border-gray-300 px-4 py-2 text-base focus:outline-none focus:border-[#508B58] bg-white"
+          >
+            <option value="">בחרו...</option>
+            <option value="lawyer">עו&quot;ד</option>
+            <option value="mediator">מגשרים</option>
+            <option value="parent">הורים</option>
+            <option value="other">אחר</option>
+          </select>
+        </div>
+
+        {/* Professional Fields - shown only for lawyers/mediators */}
+        {showProfessionalFields && (
+          <div className="flex flex-col gap-4 border-r-2 border-[#508B58] pr-4 mr-2">
+            {/* Office Name */}
+            <div className="flex flex-col gap-1">
+              <label htmlFor="officeName" className="text-base text-black">
+                שם המשרד
+              </label>
+              <input
+                type="text"
+                id="officeName"
+                name="officeName"
+                value={formData.officeName}
+                onChange={handleInputChange}
+                className="border border-gray-300 px-4 py-2 text-base focus:outline-none focus:border-[#508B58]"
+              />
+            </div>
+
+            {/* Main Field */}
+            <div className="flex flex-col gap-1">
+              <label htmlFor="mainField" className="text-base text-black">
+                תחום עיסוק עיקרי
+              </label>
+              <select
+                id="mainField"
+                name="mainField"
+                value={formData.mainField}
+                onChange={handleInputChange}
+                className="border border-gray-300 px-4 py-2 text-base focus:outline-none focus:border-[#508B58] bg-white"
+              >
+                <option value="">בחרו...</option>
+                <option value="family-law">דיני משפחה וגירושין</option>
+                <option value="family-mediation">גישור משפחתי</option>
+                <option value="other">אחר</option>
+              </select>
+            </div>
+
+            {/* Main Area */}
+            <div className="flex flex-col gap-1">
+              <label htmlFor="mainArea" className="text-base text-black">
+                אזור פעילות עיקרי
+              </label>
+              <select
+                id="mainArea"
+                name="mainArea"
+                value={formData.mainArea}
+                onChange={handleInputChange}
+                className="border border-gray-300 px-4 py-2 text-base focus:outline-none focus:border-[#508B58] bg-white"
+              >
+                <option value="">בחרו...</option>
+                <option value="tel-aviv">תל אביב והמרכז</option>
+                <option value="sharon">השרון</option>
+                <option value="jerusalem">ירושלים</option>
+                <option value="haifa">חיפה והצפון</option>
+                <option value="south">דרום</option>
+                <option value="nationwide">כלל־ארצי</option>
+              </select>
+            </div>
+          </div>
+        )}
+
+        {/* Message */}
+        <div className="flex flex-col gap-1">
+          <label htmlFor="message" className="text-base text-black">
+            הודעה
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleInputChange}
+            rows={3}
+            className="border border-gray-300 px-4 py-2 text-base focus:outline-none focus:border-[#508B58] resize-none"
+          />
+        </div>
+
+        {/* Consent checkbox and Submit */}
+        <div className="flex flex-col gap-3 mt-2">
+          <label className="flex items-start gap-2 cursor-pointer">
+            <input
+              type="checkbox"
+              name="consent"
+              checked={formData.consent}
+              onChange={handleInputChange}
+              className="mt-1 w-4 h-4 accent-[#508B58]"
+            />
+            <span className="text-xs text-black leading-tight">
+              אני מאשר/ת את תנאי מדיניות הפרטיות של אתר NEST, ואני מאשר/ת ל-NEST ליצור איתי קשר
+              ולשלוח לי פרטים לגבי השירות ו/או המוצרים אשר היא מציעה באתר.
+            </span>
+          </label>
+
+          <button
+            type="submit"
+            disabled={!isFormValid || isSubmitting}
+            className={`px-6 py-3 text-base mt-2 transition-colors ${
+              isFormValid && !isSubmitting
+                ? 'bg-[#508B58] text-white hover:bg-[#3d6b43] cursor-pointer'
+                : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+            }`}
+          >
+            {isSubmitting ? 'שולח...' : 'אישור ושליחה'}
+          </button>
+        </div>
+      </form>
+    </>
+  )
+}
