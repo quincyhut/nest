@@ -228,10 +228,9 @@ function RenderFAQBlock({ block }: { block: FAQBlock }) {
         {block.items?.map((item, index) => (
           <div key={index}>
             <p className="font-bold mb-2">שאלה: {item.question}</p>
-            <div className="text-gray-700 text-base">
-              <span>תשובה: </span>
-              <PortableText value={item.answer} />
-            </div>
+            <p className="text-gray-700 text-base">
+              תשובה: <PortableText value={item.answer} inline />
+            </p>
           </div>
         ))}
       </div>
