@@ -41,6 +41,7 @@ export default function BackgroundPatterns({ patterns }: BackgroundPatternsProps
           xmlns="http://www.w3.org/2000/svg"
           viewBox={patternViewBoxes.bottomRight}
           fill="none"
+          aria-hidden="true"
         >
           <path d={patternPaths.bottomRight} fill="#508B58" opacity={0.33} />
         </svg>
@@ -50,6 +51,7 @@ export default function BackgroundPatterns({ patterns }: BackgroundPatternsProps
           xmlns="http://www.w3.org/2000/svg"
           viewBox={patternViewBoxes.topLeft}
           fill="none"
+          aria-hidden="true"
         >
           <path d={patternPaths.topLeft} fill="#EDF2EC" />
         </svg>
@@ -59,6 +61,7 @@ export default function BackgroundPatterns({ patterns }: BackgroundPatternsProps
           xmlns="http://www.w3.org/2000/svg"
           viewBox={patternViewBoxes.topRight}
           fill="none"
+          aria-hidden="true"
         >
           <path d={patternPaths.topRight} fill="#EDF2EC" />
         </svg>
@@ -85,6 +88,7 @@ export default function BackgroundPatterns({ patterns }: BackgroundPatternsProps
             xmlns="http://www.w3.org/2000/svg"
             viewBox={patternViewBoxes[pattern.position]}
             fill="none"
+            aria-hidden="true"
           >
             <path
               d={patternPaths[pattern.position]}

@@ -65,7 +65,7 @@ export default async function DynamicPage({ params }: PageProps) {
 
       <BackgroundPatterns patterns={page.backgroundPatterns} />
 
-      <main className="w-full flex-1 pt-4 flex justify-center px-4 md:px-0 relative overflow-x-clip">
+      <main id="main-content" className="w-full flex-1 pt-4 flex justify-center px-4 md:px-0 relative overflow-x-clip">
         {isPrivacyLayout ? (
           // Privacy/Legal layout - full width content
           <div dir="rtl" className="max-w-4xl w-full text-right pb-12">

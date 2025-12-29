@@ -55,7 +55,7 @@ export default async function HomePage() {
 
       <BackgroundPatterns patterns={page.backgroundPatterns} />
 
-      <main className="w-full flex-1 pt-4 flex justify-center px-4 md:px-0">
+      <main id="main-content" className="w-full flex-1 pt-4 flex justify-center px-4 md:px-0">
         <div className="flex flex-col-reverse md:flex-row gap-6 md:gap-8 max-w-[75rem] justify-end w-full">
           <div
             dir="rtl"

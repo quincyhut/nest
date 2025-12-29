@@ -42,11 +42,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html>
+    <html lang="he" dir="rtl">
       <body
         className={`${inter.variable} antialiased [direction:ltr]`}
         dir="rtl"
       >
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:right-4 focus:z-100 focus:bg-[#508B58] focus:text-white focus:px-4 focus:py-2 focus:rounded"
+        >
+          דלג לתוכן הראשי
+        </a>
         {children}
       </body>
     </html>

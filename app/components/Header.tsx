@@ -85,9 +85,10 @@ export default function Header({ navigation }: HeaderProps) {
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden p-1"
-            aria-label="Toggle menu"
+            aria-label="פתח תפריט"
+            aria-expanded={isMenuOpen}
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -137,8 +138,8 @@ export default function Header({ navigation }: HeaderProps) {
           <div className="md:hidden fixed top-0 right-0 w-1/2 h-full bg-white z-50 shadow-lg flex flex-col">
             {/* Close button */}
             <div className="flex justify-start p-4">
-              <button onClick={() => setIsMenuOpen(false)} className="p-1" aria-label="Close menu">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <button onClick={() => setIsMenuOpen(false)} className="p-1" aria-label="סגור תפריט">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -185,7 +186,7 @@ export default function Header({ navigation }: HeaderProps) {
                 {navigation?.mobileContactTitle || 'רוצים לדבר איתנו?'}
               </p>
               <p className="text-xs text-black mt-1">
-                צוות <span className="font-brand font-bold text-black">NEST</span>{' '}
+                צוות <span lang="en" className="font-brand font-bold text-black">NEST</span>{' '}
                 {navigation?.mobileContactSubtext?.replace('צוות NEST ', '') ||
                   'זמין לשאלות, לייעוץ ולהצטרפות.'}
               </p>

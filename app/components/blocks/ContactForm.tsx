@@ -151,7 +151,7 @@ export default function ContactForm({ block }: ContactFormBlockProps) {
             <p className="text-base text-black mt-4">
               {block.successMessage || 'הפרטים נשלחו בהצלחה, ניצור עמכם קשר בהקדם.'}
               <br />
-              תודה, צוות <span className="font-brand font-bold">NEST</span>.
+              תודה, צוות <span lang="en" className="font-brand font-bold">NEST</span>.
             </p>
           </div>
         </div>
@@ -321,7 +321,7 @@ export default function ContactForm({ block }: ContactFormBlockProps) {
               className="mt-1 w-4 h-4 accent-[#508B58]"
             />
             <span className="text-xs text-black leading-tight">
-              אני מאשר/ת את תנאי מדיניות הפרטיות של אתר NEST, ואני מאשר/ת ל-NEST ליצור איתי קשר
+              אני מאשר/ת את תנאי מדיניות הפרטיות של אתר <span lang="en">NEST</span>, ואני מאשר/ת ל-<span lang="en">NEST</span> ליצור איתי קשר
               ולשלוח לי פרטים לגבי השירות ו/או המוצרים אשר היא מציעה באתר.
             </span>
           </label>
