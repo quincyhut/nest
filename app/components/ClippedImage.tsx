@@ -34,6 +34,8 @@ export default function ClippedImage({
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className={className}
+        role="img"
+        aria-label={alt}
       >
         <defs>
           <clipPath id={`image-clip-circle-${clipId}`}>
@@ -62,6 +64,8 @@ export default function ClippedImage({
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
+      role="img"
+      aria-label={alt}
     >
       <defs>
         <clipPath id={`image-clip-full-${clipId}`}>
